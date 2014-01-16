@@ -1,16 +1,12 @@
 nsvm
 ====
 
-# Network Simulation of Vehicular Manets #
+# Network Simulation of Virtual Manets #
 
-This project contains work toward vehicular manet simulations.  The scope of the
-project is to create a flexible system to run vehicular mobile ad-hoc network
-(MANET) simulations and then tweak the result of the simulation based on recent 
+This project contains work toward manet simulations.  The scope of the
+project is to create a flexible system to run mobile ad-hoc network (MANET) 
+simulations and then tweak the result of the simulation based on recent 
 research.
-
-A vehicular MANET has interesting properties, in that the z coordinate does not
-typically change that much, and the typical physical paths of nodes in the 
-network can be constrained to a road topology.  
 
 ## Setup requirements ##
 
