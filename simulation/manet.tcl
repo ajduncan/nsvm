@@ -6,20 +6,54 @@
 
 # Todo: Allow command line processing of some setup parameters, including number of nodes.
 
-# Define options
-set val(chan)           Channel/WirelessChannel    ;# channel type
-set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
-set val(netif)          Phy/WirelessPhy            ;# network interface type
-set val(mac)            Mac/802_11                 ;# MAC type
-set val(ifq)            Queue/DropTail/PriQueue    ;# interface queue type
-set val(ll)             LL                         ;# link layer type
-set val(ant)            Antenna/OmniAntenna        ;# antenna model
-set val(ifqlen)         50                         ;# max packet in ifq
-set val(nn)             10                         ;# number of mobilenodes
-set val(rp)             AODV                       ;# routing protocol
-set val(x)              500                        ;# X dimension of topography
-set val(y)              400                        ;# Y dimension of topography
-set val(stop)           100                        ;# time of simulation end
+proc setup {} {
+	# Define default values for simulation:
+	set val(chan)           Channel/WirelessChannel    ;# channel type
+	set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
+	set val(netif)          Phy/WirelessPhy            ;# network interface type
+	set val(mac)            Mac/802_11                 ;# MAC type
+	set val(ifq)            Queue/DropTail/PriQueue    ;# interface queue type
+	set val(ll)             LL                         ;# link layer type
+	set val(ant)            Antenna/OmniAntenna        ;# antenna model
+	set val(ifqlen)         50                         ;# max packet in ifq
+	set val(nn)             10                         ;# number of mobilenodes
+	set val(rp)             AODV                       ;# routing protocol
+	set val(x)              500                        ;# X dimension of topography
+	set val(y)              400                        ;# Y dimension of topography
+	set val(stop)           100                        ;# time of simulation end
+
+	puts "Run interactive setup?"
+	puts "1. Yes"
+	puts "2. No"
+	set setup [gets stdin]
+	if {$setup == 1 } {
+		puts "How many nodes should be used in the simulation?"
+		set val(nn) [gets stdin]
+		puts "Setting up simulation for $val(nn) mobile nodes."
+		puts "Enter X dimension value of topography: "
+		set val(x) [gets stdin]
+		puts "Enter Y dimension value of topography: "
+		set val(y) [gets stdin]
+		puts "Topography is $val(x) by $val(y) meters."
+		puts "Enter duration of simulation (seconds): "
+		set val(stop) [gets stdin]
+		puts "Simulation will run for $val(stop) seconds."
+
+		# finish our setup.
+		set setup 0
+	}
+	return [array get val]
+}
+
+array set val [setup]
+
+puts "Setup values are: "
+foreach key [array names val] {
+    puts "${key}:\t$val($key)"
+}
+
+exit 0
+
 
 set ns            [new Simulator]
 set tracefd       [open manet.tr w]
@@ -61,6 +95,12 @@ for {set i 0} {$i < $val(nn) } { incr i } {
 }
 
 # Todo: Provide initial location across topology for N mobile nodes.
+# Todo: Determine or define the value representation of X/Y, assume meters?
+
+for {set i 0} {$i < $val(nn) } { incr i } {
+
+}
+
 
 # Provide initial location of mobilenodes
 $node_(0) set X_ 5.0
