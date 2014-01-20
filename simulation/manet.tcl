@@ -52,7 +52,7 @@ foreach key [array names val] {
     puts "${key}:\t$val($key)"
 }
 
-exit 0
+# exit 0
 
 
 set ns            [new Simulator]
@@ -98,18 +98,20 @@ for {set i 0} {$i < $val(nn) } { incr i } {
 # Todo: Determine or define the value representation of X/Y, assume meters?
 
 for {set i 0} {$i < $val(nn) } { incr i } {
-
+	$node_($i) set X_ 5.0 + $i
+	$node_($i) set Y_ 5.0 + $i
+	$node_($i) set Z_ 0.0
 }
 
 
 # Provide initial location of mobilenodes
-$node_(0) set X_ 5.0
-$node_(0) set Y_ 5.0
-$node_(0) set Z_ 0.0
+# $node_(0) set X_ 5.0
+# $node_(0) set Y_ 5.0
+# $node_(0) set Z_ 0.0
 
-$node_(1) set X_ 280
-$node_(1) set Y_ 180.0
-$node_(1) set Z_ 0.0
+# $node_(1) set X_ 280
+# $node_(1) set Y_ 180.0
+# $node_(1) set Z_ 0.0
 
 #$node_(2) set X_ 150.0
 #$node_(2) set Y_ 240.0
