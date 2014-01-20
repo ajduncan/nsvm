@@ -4,6 +4,7 @@
 # Lifted and expanded from:
 # https://code.google.com/p/ns-allinone-2-34-imp-protocol/source/browse/trunk/src/ns-2.34/aodv/example.tcl?r=11
 
+# Todo: Allow command line processing of some setup parameters, including number of nodes.
 
 # Define options
 set val(chan)           Channel/WirelessChannel    ;# channel type
@@ -14,7 +15,7 @@ set val(ifq)            Queue/DropTail/PriQueue    ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         50                         ;# max packet in ifq
-set val(nn)             2                          ;# number of mobilenodes
+set val(nn)             10                         ;# number of mobilenodes
 set val(rp)             AODV                       ;# routing protocol
 set val(x)              500                        ;# X dimension of topography
 set val(y)              400                        ;# Y dimension of topography
@@ -59,6 +60,8 @@ for {set i 0} {$i < $val(nn) } { incr i } {
     set node_($i) [$ns node]
 }
 
+# Todo: Provide initial location across topology for N mobile nodes.
+
 # Provide initial location of mobilenodes
 $node_(0) set X_ 5.0
 $node_(0) set Y_ 5.0
@@ -79,6 +82,8 @@ $node_(1) set Z_ 0.0
 #$node_(4) set X_ 100.0
 #$node_(4) set Y_ 70.0
 #$node_(4) set Z_ 0.0
+
+# Todo: Simulate random movement across topology for N mobile nodes.
 
 # Generation of movements
 $ns at 10.0 "$node_(0) setdest 250.0 250.0 10.0"
