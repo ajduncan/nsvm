@@ -10,9 +10,26 @@ research.
 
 ## Setup requirements ##
 
+Refer to [this guide](http://www.nsnam.com/2013/10/installing-network-simulator-2-ns-235.html "ubuntu install")
+
 Ubuntu 13.10 with packages: ns2, tk, tk-dev, tcl, tcl-dev, xgraph.
 
 ns-2.35 [source code](http://sourceforge.net/projects/nsnam/files/ns-2/2.35/ns-src-2.35.tar.gz/download "Source")
+
+## Running the Simulation ##
+
+The manet simulation is defined interactively (if desired) by running `ns manet.tcl' in the simulation folder.
+
+	$ cd simulation
+	$ ns manet.tcl
+
+## Gathering Statistics ##
+
+Statistics on dropped packets, protocols, etc can be gathered and reported by parsing the manet.tr file, using
+the tran.py utility.
+
+	$ cd simulation
+	$ python tran.py manet.tr
 
 ## ns-2 Tutorials ##
 
