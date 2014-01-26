@@ -8,13 +8,25 @@ project is to create a flexible system to run mobile ad-hoc network (MANET)
 simulations and then tweak the result of the simulation based on recent 
 research.
 
-## Setup requirements ##
+## Setup Requirements ##
+
+This project was developed under Ubuntu 13.10 and is untested in other 
+versions of Ubuntu.
 
 Refer to [this guide](http://www.nsnam.com/2013/10/installing-network-simulator-2-ns-235.html "ubuntu install")
 
 Ubuntu 13.10 with packages: ns2, tk, tk-dev, tcl, tcl-dev, xgraph.
 
 ns-2.35 [source code](http://sourceforge.net/projects/nsnam/files/ns-2/2.35/ns-src-2.35.tar.gz/download "Source")
+
+You also need to install python dependencies:
+
+    $ sudo apt-get install python-virtualenv python-pip
+    $ sudo apt-get build-dep python-numpy python-scipy
+    $ virtualenv -p python2 .env2
+    $ . .env2/bin/activate
+    (.env2)$ pip install -r requirements.txt
+    $ python tran.py
 
 ## Running the Simulation ##
 
@@ -23,12 +35,14 @@ The manet simulation is defined interactively (if desired) by running `ns manet.
 	$ cd simulation
 	$ ns manet.tcl
 
-## Gathering Statistics ##
+## Report Generation ##
 
 Statistics on dropped packets, protocols, etc can be gathered and reported by parsing the manet.tr file, using
 the tran.py utility.
 
 	$ cd simulation
+	$ . env2/bin/activate
+	(env2) $ pip install -r requirements.txt
 	$ python tran.py manet.tr
 
 ## ns-2 Tutorials ##
