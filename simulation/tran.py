@@ -12,6 +12,7 @@ http://www.isi.edu/nsnam/ns/doc/node289.html
 # Parse an ns-2 trace file for some basic statistics
 
 import optparse
+from ggplot import *
 
 class Parser:
     def __init__(self):
@@ -62,6 +63,16 @@ class Parser:
                 
 
 if __name__ == "__main__":
-    p = Parser()
-    p.parse()
+
+    # p = Parser()
+    # p.parse()
+
+    p = ggplot(aes(x='date', y='beef'), data=meat) + \
+        geom_point(color='lightblue') + \
+        stat_smooth(span=.15, color='black', se=True) + \
+        ggtitle("Beef: It's What's for Dinner") + \
+        xlab("Date") + \
+        ylab("Head of Cattle Slaughtered")
+    ggsave(p, "beef.png")
+    print p
 
