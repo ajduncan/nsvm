@@ -23,8 +23,12 @@ You also need to install python dependencies:
 
     $ sudo apt-get install python-virtualenv python-pip
     $ sudo apt-get build-dep python-numpy python-scipy
+    $ cd simulation
     $ virtualenv -p python2 .env2
     $ . .env2/bin/activate
+    (.env2)$ pip install numpy 
+    (.env2)$ pip install scipy 
+    (.env2)$ pip install pandas
     (.env2)$ pip install -r requirements.txt
     $ python tran.py
 
