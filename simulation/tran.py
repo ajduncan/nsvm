@@ -6,6 +6,10 @@ Trace file analysis of ns-2, as defined in:
 
 http://www.isi.edu/nsnam/ns/doc/node289.html
 
+and
+
+http://nsnam.isi.edu/nsnam/index.php/NS-2_Trace_Formats#AODV_Trace_Formats
+
 """
 
 # Lifted from http://ilab.cs.byu.edu/cs660/tools/parse.py
