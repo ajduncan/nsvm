@@ -4,9 +4,10 @@
 # Lifted and expanded from:
 # https://code.google.com/p/ns-allinone-2-34-imp-protocol/source/browse/trunk/src/ns-2.34/aodv/example.tcl?r=11
 
-# Todo: Review documentation further: http://www.isi.edu/nsnam/ns/doc/ns_doc.pdf
+# ONGOING. Todo: Review documentation further: http://www.isi.edu/nsnam/ns/doc/ns_doc.pdf
 
-# Todo: Allow command line processing of some setup parameters, including number of nodes.
+# DONE. Todo: Allow command line processing of some setup parameters, including number of nodes.
+# Todo: include seed and separate random numbers for topology and other variables.
 
 proc setup {} {
 	# Define default values for simulation:
@@ -79,10 +80,6 @@ $topo load_flatgrid $val(x) $val(y)
 
 create-god $val(nn)
 
-#
-#  Create nn mobilenodes [$val(nn)] and attach them to the channel.
-#
-
 # configure the nodes
 $ns node-config -adhocRouting $val(rp) \
 -llType $val(ll) \
@@ -99,6 +96,8 @@ $ns node-config -adhocRouting $val(rp) \
 -macTrace OFF \
 -movementTrace ON
 
+# DONE: Todo: setup N nodes and their properties/connections?
+
 for {set i 0} {$i < $val(nn) } { incr i } {
     set node_($i) [$ns node]
     # Create random movement for nodes
@@ -114,14 +113,14 @@ for {set i 0} {$i < $val(nn) } { incr i } {
 
 }
 
-# Todo: Simulate specific movement across topology for N mobile nodes.
+# Todo: Allow simulation of *specific* movement across topology for N mobile nodes.
 # for {set i 0} {$i < $val(nn) } { incr i } {
 	# puts [format "$node_($i) at 10.0 setdest %d %d 10.0" [expr round([$topology_ value])] [expr round([$topology_ value])] ]
 	# $ns at 10.0 [format "$node_($i) setdest 400.0 400.0 10.0" [expr $i]]
 # }
 
 
-# configure node 0 and node 1
+# Todo: Allow ftp between j nodes instead of between 0 and N specifically.
 # node 0 as tcp and node 1 as sink
 set tcp01 [new Agent/TCP/Newreno]
 $ns attach-agent $node_(0) $tcp01
@@ -134,8 +133,6 @@ $ns connect $tcp01 $sink01
 set ftp01 [new Application/FTP]
 $ftp01 attach-agent $tcp01
 $ns at 10.0 "$ftp01 start"
-
-# Printing the window size
 
 # ending nam and the simulation
 $ns at $val(stop) "$ns nam-end-wireless $val(stop)"
