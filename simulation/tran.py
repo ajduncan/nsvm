@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from ggplot import *
+# from ggplot import *
 import optparse
 
 # import namtrace as trace
@@ -21,16 +21,18 @@ if __name__ == "__main__":
     nodes = trace.get_nodes(tracefile_lines)
     node_stats = {}
     for node in nodes:
-        (d, r, s) = trace.get_packet_statistics(tracefile_lines, node)
-        node_stats[node] = (sum(d), sum(r), sum(s))
+        (d, r, s, f, dp_features) = trace.get_packet_statistics(tracefile_lines, node)
+        node_stats[node] = (sum(d), sum(r), sum(s), sum(f), dp_features)
 
-    print "Dropped packets for {0}: {1}".format(0, node_stats[0][0])
-    print "Received packets for {0}: {1}".format(0, node_stats[0][1])
-    print "Sent packets for {0}: {1}".format(0, node_stats[0][2])
+    print "Dropped packet size for {0}: {1}".format(0, node_stats[0][0])
+    print "Time sequenced reason for dropped packets: {}".format(node_stats[0][4])
+    print "Received packet size for {0}: {1}".format(0, node_stats[0][1])
+    print "Sent packet size for {0}: {1}".format(0, node_stats[0][2])
 
-    print "Dropped packets for {0}: {1}".format(19, node_stats[19][0])
-    print "Received packets for {0}: {1}".format(19, node_stats[19][1])
-    print "Sent packets for {0}: {1}".format(19, node_stats[19][2])
+    print "Dropped packet size for {0}: {1}".format(19, node_stats[19][0])
+    print "Time sequenced reason for dropped packets: {}".format(node_stats[19][4])
+    print "Received packet size for {0}: {1}".format(19, node_stats[19][1])
+    print "Sent packet size for {0}: {1}".format(19, node_stats[19][2])
 
 """
     p = ggplot(aes(x='date', y='beef'), data=meat) + \
