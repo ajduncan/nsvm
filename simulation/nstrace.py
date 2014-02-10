@@ -19,6 +19,12 @@ import re
 
 re_node_register = re.compile("^M (\d+.\d+) (\d+)")
 re_packet_event = re.compile("-It (\w+) -Il (\d+)")
+
+# Note, the new format is inconsistent with isi.edu's current documentation.
+# example drop event:
+# d -t 70.017445296 -Hs 19 -Hd 0 -Ni 19 -Nx 334.11 -Ny 138.84 -Nz 0.00 -Ne -1.000000 -Nl RTR -Nw CBK -Ma 0 -Md 0 -Ms 13 -Mt 800 -Is 19.0 -Id 0.0 -It ack -Il 40 -If 0 -Ii 9955 -Iv 30 -Pn tcp -Ps 4973 -Pa 0 -Pf 0 -Po 0 
+
+re_wireless_event = re.compile("-t (\d+.\d+) -Hs (\d+) -Hd (\d+) -Ni (\d+) -Nx (\d+.\d+) -Ny (\d+.\d+) -Nz (\d+.\d+) -Ne ([-]\d+.\d+) -Nl (\w+) -Nw (\w+) -Ma ([0-9A-Fa-f]+) -Md ([0-9A-Fa-f]+) -Ms ([0-9A-Fa-f]+) -Mt ([0-9A-Fa-f]+)")
 re_node_identifier = re.compile("-Ni (\d+)")
 re_send_event = re.compile("^s")
 re_receive_event = re.compile("^r")
@@ -49,8 +55,10 @@ def get_packet_statistics(lines, node):
     """
 
     dropped_packets = [0,]
+    dp_features = []
     received_packets = [0,]
     sent_packets = [0,]
+    forwarded_packets = [0,]
 
     for line in lines:
         # get dropped packets.
@@ -59,7 +67,9 @@ def get_packet_statistics(lines, node):
             pe_found = re_packet_event.search(line)
             node_found = re_node_identifier.search(line)
             if node_found.group(1) == str(node):
-                # print "Node ({0}) Dropped ({1}): {2} bytes.".format(node_found.group(1), pe_found.group(1), pe_found.group(2))
+                # extract wireless features for matching node.
+                wireless_found = re_wireless_event.search(line)
+                dp_features.append({'time': wireless_found.group(1), 'reason': wireless_found.group(10)})
                 dropped_packets.append(int(pe_found.group(2)))
 
         # get received packets.
@@ -68,10 +78,9 @@ def get_packet_statistics(lines, node):
             pe_found = re_packet_event.search(line)
             node_found = re_node_identifier.search(line)
             if node_found.group(1) == str(node):
-                # print "Node ({0}) Received ({1}): {2} bytes.".format(node_found.group(1), pe_found.group(1), pe_found.group(2))
                 received_packets.append(int(pe_found.group(2)))
 
-    return (dropped_packets, received_packets, sent_packets)
+    return (dropped_packets, received_packets, sent_packets, forwarded_packets, dp_features)
 
 
 if __name__ == "__main__":
