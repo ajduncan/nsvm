@@ -70,6 +70,8 @@ set tracefd       [open manet.tr w]
 set windowVsTime2 [open win.tr w]
 set namtrace      [open manet.nam w]
 
+# use the new trace format.
+$ns use-newtrace
 $ns trace-all $tracefd
 $ns namtrace-all-wireless $namtrace $val(x) $val(y)
 
