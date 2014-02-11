@@ -22,9 +22,9 @@ re_packet_event = re.compile("-It (\w+) -Il (\d+)")
 
 # Note, the new format is inconsistent with isi.edu's current documentation.
 # example drop event:
-# d -t 70.017445296 -Hs 19 -Hd 0 -Ni 19 -Nx 334.11 -Ny 138.84 -Nz 0.00 -Ne -1.000000 -Nl RTR -Nw CBK -Ma 0 -Md 0 -Ms 13 -Mt 800 -Is 19.0 -Id 0.0 -It ack -Il 40 -If 0 -Ii 9955 -Iv 30 -Pn tcp -Ps 4973 -Pa 0 -Pf 0 -Po 0 
-
-re_wireless_event = re.compile("-t (\d+.\d+) -Hs (\d+) -Hd (\d+) -Ni (\d+) -Nx (\d+.\d+) -Ny (\d+.\d+) -Nz (\d+.\d+) -Ne ([-]\d+.\d+) -Nl (\w+) -Nw (\w+) -Ma ([0-9A-Fa-f]+) -Md ([0-9A-Fa-f]+) -Ms ([0-9A-Fa-f]+) -Mt ([0-9A-Fa-f]+)")
+# d -t 70.017445296 -Hs 19 -Hd 0  -Ni 19 -Nx 334.11 -Ny 138.84 -Nz 0.00 -Ne -1.000000 -Nl RTR -Nw CBK -Ma 0 -Md 0  -Ms 13 -Mt 800 -Is 19.0 -Id 0.0  -It ack -Il 40   -If 0 -Ii 9955 -Iv 30 -Pn tcp -Ps 4973 -Pa 0 -Pf 0 -Po 0 
+# d -t 10.289708693 -Hs 0  -Hd 19 -Ni 0  -Nx 49.61  -Ny 305.80 -Nz 0.00 -Ne -1.000000 -Nl IFQ -Nw --- -Ma 0 -Md 13 -Ms 0  -Mt 800 -Is 0.0  -Id 19.0 -It tcp -Il 1040 -If 0 -Ii 61   -Iv 30 -Pn tcp -Ps 38   -Pa 0 -Pf 0 -Po 0 
+re_wireless_event = re.compile("-t (\d+.\d+) -Hs (\d+) -Hd (\d+) -Ni (\d+) -Nx (\d+.\d+) -Ny (\d+.\d+) -Nz (\d+.\d+) -Ne ([-]\d+.\d+) -Nl (\w+) -Nw ([---]{3}|\w+) -Ma ([0-9A-Fa-f]+) -Md ([0-9A-Fa-f]+) -Ms ([0-9A-Fa-f]+) -Mt ([0-9A-Fa-f]+)")
 re_node_identifier = re.compile("-Ni (\d+)")
 re_send_event = re.compile("^s")
 re_receive_event = re.compile("^r")
