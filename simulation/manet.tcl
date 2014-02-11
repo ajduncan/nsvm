@@ -18,7 +18,7 @@ proc setup {} {
 	set val(ifq)            Queue/DropTail/PriQueue    ;# interface queue type
 	set val(ll)             LL                         ;# link layer type
 	set val(ant)            Antenna/OmniAntenna        ;# antenna model
-	set val(ifqlen)         25                         ;# max packet in ifq (default was 50)
+	set val(ifqlen)         15                         ;# max packet in ifq (default was 50)
 	set val(nn)             20                         ;# number of mobilenodes
 	set val(rp)             AODV                       ;# routing protocol
 	set val(x)              500                        ;# X dimension of topography

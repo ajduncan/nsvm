@@ -25,12 +25,20 @@ if __name__ == "__main__":
         node_stats[node] = (sum(d), sum(r), sum(s), sum(f), dp_features)
 
     print "Dropped packet size for {0}: {1}".format(0, node_stats[0][0])
-    print "Time sequenced reason for dropped packets: {}".format(node_stats[0][4])
+    print "Time sequenced reason for dropped packets: "
+    for feature in node_stats[0][4]:
+        for k, v in feature.iteritems():
+            print "{0}: {1}".format(k, v)
+
     print "Received packet size for {0}: {1}".format(0, node_stats[0][1])
     print "Sent packet size for {0}: {1}".format(0, node_stats[0][2])
 
     print "Dropped packet size for {0}: {1}".format(19, node_stats[19][0])
-    print "Time sequenced reason for dropped packets: {}".format(node_stats[19][4])
+    print "Time sequenced reason for dropped packets: "
+    for feature in node_stats[19][4]:
+        for k, v in feature.iteritems():
+            print "{0}: {1}".format(k, v)
+
     print "Received packet size for {0}: {1}".format(19, node_stats[19][1])
     print "Sent packet size for {0}: {1}".format(19, node_stats[19][2])
 
