@@ -39,6 +39,12 @@ proc setup {} {
 		puts "Enter Y dimension value of topography: "
 		set val(y) [gets stdin]
 		puts "Topography is $val(x) by $val(y) meters."
+		puts "Enter max packet in ifq:"
+		set val(ifqlen) [gets stdin]
+		puts "Max packet in ifq is $val(ifqlen)."
+		puts "Enter percent of mobilenodes performing requests (.01 to 1):"
+		set val(rqnp) [gets stdin]
+		puts "Percent mobilenodes performing requests is $val(rqnp)."
 		puts "Enter duration of simulation (seconds): "
 		set val(stop) [gets stdin]
 		puts "Simulation will run for $val(stop) seconds."
@@ -96,7 +102,7 @@ $ns node-config -adhocRouting $val(rp) \
 -topoInstance $topo \
 -agentTrace ON \
 -routerTrace ON \
--macTrace OFF \
+-macTrace ON \
 -movementTrace ON
 
 # DONE: Todo: setup N nodes and their properties/connections?
@@ -153,8 +159,8 @@ proc stop {} {
     $ns flush-trace
     close $tracefd
     close $namtrace
-    #Execute nam on the trace file
-    exec nam manet.nam &
+    # Execute nam on the trace file
+    # exec nam manet.nam &
     exit 0
 }
 
