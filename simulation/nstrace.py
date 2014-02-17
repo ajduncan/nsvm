@@ -69,7 +69,8 @@ def get_packet_statistics(lines, node):
             if node_found.group(1) == str(node):
                 # extract wireless features for matching node.
                 wireless_found = re_wireless_event.search(line)
-                dp_features.append({'time': wireless_found.group(1), 'reason': wireless_found.group(10)})
+                if wireless_found:
+                    dp_features.append({'time': wireless_found.group(1), 'reason': wireless_found.group(10)})
                 dropped_packets.append(int(pe_found.group(2)))
 
         # get received packets.
