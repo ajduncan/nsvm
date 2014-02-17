@@ -24,6 +24,7 @@ proc setup {} {
 	set val(x)              500                        ;# X dimension of topography
 	set val(y)              400                        ;# Y dimension of topography
 	set val(stop)           100                        ;# time of simulation end
+	set val(rqnp)			.5                         ;# percent of mobilenodes performing requests.
 
 	puts "Run interactive setup?"
 	puts "1. Yes"
@@ -122,19 +123,25 @@ for {set i 0} {$i < $val(nn) } { incr i } {
 # }
 
 
-# Todo: Allow ftp between j nodes instead of between 0 and N specifically.
+# DONE: Todo: Allow ftp between j nodes instead of between 0 and N specifically.
 # node 0 as tcp and node 1 as sink
-set tcp01 [new Agent/TCP/Newreno]
-$ns attach-agent $node_(0) $tcp01
 
-set sink01 [new Agent/TCPSink]
-$ns attach-agent $node_([expr $val(nn) - 1 ]) $sink01
+for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
+	# use nn - i and i e.g. nn = 100 and rqnp = 1, 1:100, 2:99, 3:98, ... 49:51
 
-$ns connect $tcp01 $sink01
+	set tcp_($i) [new Agent/TCP/Newreno]
+	$ns attach-agent $node_($i) $tcp_($i)
 
-set ftp01 [new Application/FTP]
-$ftp01 attach-agent $tcp01
-$ns at 10.0 "$ftp01 start"
+	set sink_($i) [new Agent/TCPSink]
+	$ns attach-agent $node_([expr $val(nn) - 1 - $i ]) $sink_($i)
+
+	$ns connect $tcp_($i) $sink_($i)
+
+	set ftp_($i) [new Application/FTP]
+	$ftp_($i) attach-agent $tcp_($i)
+	$ns at 10.0 "$ftp_($i) start"
+
+}
 
 # ending nam and the simulation
 $ns at $val(stop) "$ns nam-end-wireless $val(stop)"
