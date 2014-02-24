@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 """ 
+A library of functions for working with ns-2 data in nstrace format.
 
 Trace file analysis of ns-2, as defined in:
 
@@ -31,11 +32,15 @@ re_receive_event = re.compile("^r")
 re_drop_event = re.compile("^d")
 re_forward_event = re.compile("^f")
 
+# We only care about matching ttl presently?
+re_predict_event = re.compile("-t (\d+.\d+) (.*) -Nl MAC (.*) -It ack (.*) -Iv (\d+)")
+re_destination_identifier = re.compile("-Hd (\d+)")
 
+
+""" 
+Return node register IDs provided lines from a trace file. 
+"""
 def get_nodes(lines):
-    """ 
-    Return node register IDs provided lines from a trace file. 
-    """
 
     nodes = []
     for line in lines:
@@ -48,11 +53,31 @@ def get_nodes(lines):
 
     return nodes
 
+"""
+Provided lines, src and dst, build prediction event data for the predictor.
+"""
+def get_prediction_events(lines, src, dst):
+    predict_data = {'0': '999'}
 
+    for line in lines:
+        # get predict events
+        found = re_predict_event.search(line)
+        if found:
+            node_source = re_node_identifier.search(line)
+            node_destination = re_destination_identifier.search(line)
+
+            if node_source and node_destination:
+
+                if node_source.group(1) == str(src) and node_destination.group(1) == str(dst):
+                    predict_data[found.group(1)] = found.group(5)
+
+    return predict_data
+
+
+""" 
+Return packet statistics for a given node.
+"""
 def get_packet_statistics(lines, node):
-    """ 
-    Return packet statistics for a given node.
-    """
 
     dropped_packets = [0,]
     dp_features = []
@@ -66,7 +91,7 @@ def get_packet_statistics(lines, node):
         if found:
             pe_found = re_packet_event.search(line)
             node_found = re_node_identifier.search(line)
-            if node_found.group(1) == str(node):
+            if node_found.group(1) == str(node) and pe_found:
                 # extract wireless features for matching node.
                 wireless_found = re_wireless_event.search(line)
                 if wireless_found:
@@ -78,7 +103,7 @@ def get_packet_statistics(lines, node):
         if found:
             pe_found = re_packet_event.search(line)
             node_found = re_node_identifier.search(line)
-            if node_found.group(1) == str(node):
+            if node_found.group(1) == str(node) and pe_found:
                 received_packets.append(int(pe_found.group(2)))
 
     return (dropped_packets, received_packets, sent_packets, forwarded_packets, dp_features)
