@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
+from datetime import datetime
 import subprocess
 
 
 def run_simulation(defaultrng=9999, predict=False):
 	if predict:
-		print "Running ns-2 simulation with prediction algorithm."
+		print "{0} : Running ns-2 simulation with prediction algorithm.".format(datetime.now())
 		manet_process = subprocess.Popen(
 			[
 		    	'ns',
@@ -17,7 +18,7 @@ def run_simulation(defaultrng=9999, predict=False):
 		    stdout=open('/dev/null', 'w'),
 		    stderr=open('/dev/null', 'w'))
 	else:
-		print "Running ns-2 simulation without prediction algorithm."
+		print "{0} : Running ns-2 simulation without prediction algorithm.".format(datetime.now())
 		manet_process = subprocess.Popen(
 			[
 		    	'ns',
@@ -29,11 +30,11 @@ def run_simulation(defaultrng=9999, predict=False):
 		    stderr=open('/dev/null', 'w'))
 
 	manet_process.wait()
-	print "ns-2 simulation complete."
+	print "{0} : ns-2 simulation complete.".format(datetime.now())
 
 
 def run_prediction():
-    print "Running prediction."
+    print "{0} : Running prediction.".format(datetime.now())
     predict_process = subprocess.Popen(
         [
         	'simulation/.env2/bin/python',
@@ -43,7 +44,7 @@ def run_prediction():
         stdout=open('/dev/null', 'w'),
         stderr=open('/dev/null', 'w'))
     predict_process.wait()
-    print "Prediction generated."
+    print "{0} : Prediction generated.".format(datetime.now())
 
 
 if __name__ == "__main__":
@@ -54,6 +55,7 @@ if __name__ == "__main__":
 	  c. Runs ns-2 with an augmented throughput/link at particular times based on prediction that a link will fail with CBK
 	"""
 
-	run_simulation()
+	rng = 9999
+	run_simulation(defaultrng=rng, predict=False)
 	run_prediction()
 	run_simulation(predict=True)

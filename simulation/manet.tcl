@@ -172,6 +172,12 @@ for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
 
 }
 
+if { [file exists "predict.tcl" ] } {
+	# include result of predict in the form of:
+	# $ns at <time> "<whatever>"
+	source "predict.tcl"
+}
+
 # ending nam and the simulation
 $ns at $val(stop) "$ns nam-end-wireless $val(stop)"
 $ns at $val(stop) "stop"
