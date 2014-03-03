@@ -27,12 +27,23 @@ proc setup {} {
 	set val(rqnp)			.5                         ;# percent of mobilenodes performing requests.
 
 	global argc argv
+	global defaultRNG
+	$defaultRNG seed 99999
+	set noinput 0
 
 	if {$argc > 0} {
-		if {[lindex $argv 0] == "--noinput"} {
-			set noinput 1
-		} else {
-			set noinput 0
+		for {set i 0} {$i < $argc } { incr i } {
+			if {[lindex $argv $i] == "--noinput"} {
+				set noinput 1
+			}
+
+			if {[lindex $argv $i] == "--defaultrng"} {
+				if {$argc > [expr $i + 1]} { 
+					$defaultRNG seed [lindex $argv [expr $i + 1]]
+					puts "defaultRNG is $defaultRNG"
+				}
+			}
+
 		}
 	}
 
@@ -76,7 +87,7 @@ foreach key [array names val] {
 
 # Todo accept seed in setup.
 global defaultRNG
-$defaultRNG seed 99999
+puts "defaultRNG is $defaultRNG"
 
 set topology_ [new RandomVariable/Uniform]
 $topology_ set min_ $val(x)

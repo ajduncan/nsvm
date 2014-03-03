@@ -3,7 +3,7 @@
 import subprocess
 
 
-def run_simulation(predict=False):
+def run_simulation(defaultrng=9999, predict=False):
 	if predict:
 		print "Running ns-2 simulation with prediction algorithm."
 		manet_process = subprocess.Popen(
@@ -11,6 +11,7 @@ def run_simulation(predict=False):
 		    	'ns',
 		    	'simulation/manet.tcl',
 		    	'--noinput',
+		    	'--defaultrng {0}'.format(defaultrng),
 		    	'--predict'
 		    ],
 		    stdout=open('/dev/null', 'w'),
@@ -21,7 +22,8 @@ def run_simulation(predict=False):
 			[
 		    	'ns',
 		    	'simulation/manet.tcl',
-		    	'--noinput'
+		    	'--noinput',
+		    	'--defaultrng {0}'.format(defaultrng)
 		    ],
 		    stdout=open('/dev/null', 'w'),
 		    stderr=open('/dev/null', 'w'))
