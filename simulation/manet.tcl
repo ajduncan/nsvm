@@ -26,31 +26,43 @@ proc setup {} {
 	set val(stop)           100                        ;# time of simulation end
 	set val(rqnp)			.5                         ;# percent of mobilenodes performing requests.
 
-	puts "Run interactive setup?"
-	puts "1. Yes"
-	puts "2. No"
-	set setup [gets stdin]
-	if {$setup == 1 } {
-		puts "How many nodes should be used in the simulation?"
-		set val(nn) [gets stdin]
-		puts "Setting up simulation for $val(nn) mobile nodes."
-		puts "Enter X dimension value of topography: "
-		set val(x) [gets stdin]
-		puts "Enter Y dimension value of topography: "
-		set val(y) [gets stdin]
-		puts "Topography is $val(x) by $val(y) meters."
-		puts "Enter max packet in ifq:"
-		set val(ifqlen) [gets stdin]
-		puts "Max packet in ifq is $val(ifqlen)."
-		puts "Enter percent of mobilenodes performing requests (.01 to 1):"
-		set val(rqnp) [gets stdin]
-		puts "Percent mobilenodes performing requests is $val(rqnp)."
-		puts "Enter duration of simulation (seconds): "
-		set val(stop) [gets stdin]
-		puts "Simulation will run for $val(stop) seconds."
+	global argc argv
 
-		# finish our setup.
-		set setup 0
+	if {$argc > 0} {
+		if {[lindex $argv 0] == "--noinput"} {
+			set noinput 1
+		} else {
+			set noinput 0
+		}
+	}
+
+	if {$noinput == 0} {
+		puts "Run interactive setup?"
+		puts "1. Yes"
+		puts "2. No"
+		set setup [gets stdin]
+		if {$setup == 1 } {
+			puts "How many nodes should be used in the simulation?"
+			set val(nn) [gets stdin]
+			puts "Setting up simulation for $val(nn) mobile nodes."
+			puts "Enter X dimension value of topography: "
+			set val(x) [gets stdin]
+			puts "Enter Y dimension value of topography: "
+			set val(y) [gets stdin]
+			puts "Topography is $val(x) by $val(y) meters."
+			puts "Enter max packet in ifq:"
+			set val(ifqlen) [gets stdin]
+			puts "Max packet in ifq is $val(ifqlen)."
+			puts "Enter percent of mobilenodes performing requests (.01 to 1):"
+			set val(rqnp) [gets stdin]
+			puts "Percent mobilenodes performing requests is $val(rqnp)."
+			puts "Enter duration of simulation (seconds): "
+			set val(stop) [gets stdin]
+			puts "Simulation will run for $val(stop) seconds."
+
+			# finish our setup.
+			set setup 0
+		}
 	}
 	return [array get val]
 }
