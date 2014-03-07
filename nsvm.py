@@ -7,6 +7,7 @@ import subprocess
 def run_simulation(defaultrng=9999, predict=False):
 	if predict:
 		print "{0} : Running ns-2 simulation with prediction algorithm.".format(datetime.now())
+		print "RNG is {0}".format(defaultrng)
 		manet_process = subprocess.Popen(
 			[
 		    	'ns',
@@ -19,6 +20,7 @@ def run_simulation(defaultrng=9999, predict=False):
 		    stderr=open('/dev/null', 'w'))
 	else:
 		print "{0} : Running ns-2 simulation without prediction algorithm.".format(datetime.now())
+		print "RNG is {0}".format(defaultrng)
 		manet_process = subprocess.Popen(
 			[
 		    	'ns',

@@ -7,6 +7,17 @@ import predict
 
 
 """
+Convert a prediction report for a given interaction of two nodes into ns-2 TCL commands.
+"""
+def predict_tcl(tracefile_lines, src, dst):
+    node_predictions = predict.build_prediction(tracefile_lines, src, dst)
+    if node_predictions:
+        for time, prediction in node_predictions.iteritems():
+            if prediction == 1:
+                print "$ns at {0}".format(time, prediction)
+                print "\n\n"
+
+"""
 Print a prediction report for a given interaction of two nodes.
 """
 def predict_report(tracefile_lines, src, dst):
