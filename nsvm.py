@@ -42,10 +42,13 @@ def run_prediction(virtualenv='~/.env2/'):
         [
             python_interpreter,
             'simulation/tran.py',
-            'simulation/manet.tr'
-        ],
-        stdout=open('/dev/null', 'w'),
-        stderr=open('/dev/null', 'w'))
+            'simulation/manet.tr',
+            'simulation/predict.tcl',
+            'simulation/predict.txt'
+        ])
+    #,
+    #    stdout=open('/dev/null', 'w'),
+    #    stderr=open('/dev/null', 'w'))
     predict_process.wait()
     print "{0} : Prediction generated.".format(datetime.now())
 
@@ -64,4 +67,4 @@ if __name__ == "__main__":
 
     run_simulation(defaultrng=rng, predict=False)
     run_prediction(virtualenv=virtualenv)
-    run_simulation(defaultrng=rng, predict=True)
+    # run_simulation(defaultrng=rng, predict=True)
