@@ -18,7 +18,7 @@ apt-get -y build-dep python-numpy python-scipy > /dev/null 2>&1
 if [ ! -d "/home/vagrant/nsvm_env2" ];
 then
 	echo "Creating application virtual environment."
-	sudo -u vagrant virtualenv -p python2 /home/vagrant/nsvm_env2
+	sudo -u vagrant virtualenv -p python2 /home/vagrant/nsvm_env2 > /dev/null 2>&1
 fi
 
 # Install all the dependencies in the order which satisfies requirements.
