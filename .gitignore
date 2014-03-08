@@ -1,3 +1,4 @@
 /simulation/.env2
 /simulation/beef.png
 *.pyc
+.vagrant
