@@ -1,5 +1,22 @@
 #!/bin/sh
 
+echo "
+########################################################################
+                      _     _             
+ _ __  _ __ _____   _(_)___(_) ___  _ __  
+| '_ \| '__/ _ \ \ / / / __| |/ _ \| '_ \ 
+| |_) | | | (_) \ V /| \__ \ | (_) | | | |
+| .__/|_|  \___/ \_/ |_|___/_|\___/|_| |_|
+|_|                                       
+
+Author: Andrew Duncan <ajduncan@gmail.com>, <Andrew-Duncan@utc.edu>
+Project: nsvm
+Experiment: Node out of range prediction
+
+########################################################################
+"
+
+
 # Update and upgrade
 echo "Updating system..."
 apt-get update > /dev/null 2>&1
@@ -49,8 +66,17 @@ echo "Timestamp file created under /home/vagrant/started"
 
 if [ -d /home/vagrant/nsvm_env2 ] && [ -d /vagrant/simulation ] && [ -f /vagrant/nsvm.py ];
 then
-	echo "Running experiment."
+	echo "
+########################################################################
+Running experiment...
+"
+
 	cd /vagrant
 	sudo -u vagrant /home/vagrant/nsvm_env2/bin/python /vagrant/nsvm.py
-	echo "Experiment complete."
+	echo "
+
+Experiment complete.
+########################################################################
+"
+
 fi
