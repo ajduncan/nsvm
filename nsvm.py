@@ -42,9 +42,9 @@ def run_prediction(virtualenv='~/.env2/'):
         [
             python_interpreter,
             'simulation/tran.py',
-            'simulation/manet.tr',
-            'simulation/predict.tcl',
-            'simulation/predict.txt'
+            'results/manet.tr',
+            'results/predict.tcl',
+            'results/predict.txt'
         ])
     #,
     #    stdout=open('/dev/null', 'w'),

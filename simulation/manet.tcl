@@ -34,6 +34,7 @@ proc setup {} {
 	set results ./results
 	set val(tracefd_file)	"$results/manet.tr"
 	set val(namtrace_file)	"$results/manet.nam"
+	set val(predict_file)	"$results/predict.tcl"
 
 	if {$argc > 0} {
 		for {set i 0} {$i < $argc } { incr i } {
@@ -178,7 +179,7 @@ for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
 if { [file exists "predict.tcl" ] } {
 	# include result of predict in the form of:
 	# $ns at <time> "<whatever>"
-	source "predict.tcl"
+	source $val(predict_file)
 }
 
 # ending nam and the simulation
