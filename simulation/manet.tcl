@@ -30,6 +30,10 @@ proc setup {} {
 	global defaultRNG
 	$defaultRNG seed 99999
 	set noinput 0
+	# result folder for experiments
+	set results ./results
+	set val(tracefd_file)	"$results/manet.tr"
+	set val(namtrace_file)	"$results/manet.nam"
 
 	if {$argc > 0} {
 		for {set i 0} {$i < $argc } { incr i } {
@@ -96,9 +100,8 @@ $topology_ set max_ $val(y)
 puts [format "Got random topology value = %d" [expr round([$topology_ value])]]
 
 set ns            [new Simulator]
-set tracefd       [open manet.tr w]
-set windowVsTime2 [open win.tr w]
-set namtrace      [open manet.nam w]
+set tracefd       [open $val(tracefd_file) w]
+set namtrace      [open $val(namtrace_file) w]
 
 # use the new trace format.
 $ns use-newtrace
