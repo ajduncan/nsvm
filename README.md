@@ -42,6 +42,10 @@ following from the project root:
 
     $ vagrant up
 
+To run the experiment again while the vm is running:
+
+    $ vagrant provision
+
 To rebuild all dependencies and run the experiment again:
 
     $ vagrant halt
@@ -52,18 +56,28 @@ To rebuild all dependencies and run the experiment again:
 
 The manet simulation is defined interactively (if desired) by running `ns manet.tcl' in the simulation folder.
 
-	$ cd simulation
+    $ vagrant ssh
+
+    $ cd /vagrant/simulation
 	$ ns manet.tcl
+
+## Results ##
+
+The project stores results under the results folder, and includes the trace files and predict
+files.  If you're using vagrant to run the experiment, this folder will be updated with data after
+the experiment concludes.
 
 ## Report Generation ##
 
 Statistics on dropped packets, protocols, etc can be gathered and reported by parsing the manet.tr file, using
 the tran.py utility.
 
-	$ cd simulation
-	$ . env2/bin/activate
+    $ vagrant ssh
+
+	$ cd /vagrant
+	$ . /home/vagrant/env2/bin/activate
 	(env2) $ pip install -r requirements.txt
-	$ python tran.py manet.tr
+	$ python simulation/tran.py results/manet.tr
 
 ## ns-2 Tutorials ##
 
