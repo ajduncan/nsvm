@@ -77,7 +77,7 @@ the tran.py utility.
 	$ cd /vagrant
 	$ . /home/vagrant/env2/bin/activate
 	(env2) $ pip install -r requirements.txt
-	$ python simulation/tran.py results/manet.tr
+	$ python simulation/tran.py results/manet.tr results/predict.tcl results/predict.txt
 
 ## ns-2 Tutorials ##
 
