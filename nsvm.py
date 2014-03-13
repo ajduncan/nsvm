@@ -8,10 +8,10 @@ def run_simulation(defaultrng=9999, predict=False):
     if predict:
         print "{0} : Running ns-2 simulation with prediction algorithm.".format(datetime.now())
         print "RNG is {0}".format(defaultrng)
-        manet_process = subprocess.Popen(
+        simulation_process = subprocess.Popen(
             [
                 'ns',
-                'simulation/manet.tcl',
+                'simulation/simulation.tcl',
                 '--noinput',
                 '--defaultrng {0}'.format(defaultrng),
                 '--predict'
@@ -21,17 +21,17 @@ def run_simulation(defaultrng=9999, predict=False):
     else:
         print "{0} : Running ns-2 simulation without prediction algorithm.".format(datetime.now())
         print "RNG is {0}".format(defaultrng)
-        manet_process = subprocess.Popen(
+        simulation_process = subprocess.Popen(
             [
                 'ns',
-                'simulation/manet.tcl',
+                'simulation/simulation.tcl',
                 '--noinput',
                 '--defaultrng {0}'.format(defaultrng)
             ],
             stdout=open('/dev/null', 'w'),
             stderr=open('/dev/null', 'w'))
 
-    manet_process.wait()
+    simulation_process.wait()
     print "{0} : ns-2 simulation complete.".format(datetime.now())
 
 
@@ -42,7 +42,7 @@ def run_prediction(virtualenv='~/.env2/'):
         [
             python_interpreter,
             'simulation/tran.py',
-            'results/manet.tr',
+            'results/simulation.tr',
             'results/predict.tcl',
             'results/predict.txt'
         ])

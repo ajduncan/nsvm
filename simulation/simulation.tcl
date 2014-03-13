@@ -32,8 +32,8 @@ proc setup {} {
 	set noinput 0
 	# result folder for experiments
 	set results ./results
-	set val(tracefd_file)	"$results/manet.tr"
-	set val(namtrace_file)	"$results/manet.nam"
+	set val(tracefd_file)	"$results/simulation.tr"
+	set val(namtrace_file)	"$results/simulation.nam"
 	set val(predict_file)	"$results/predict.tcl"
 
 	if {$argc > 0} {
@@ -193,7 +193,7 @@ proc stop {} {
     close $tracefd
     close $namtrace
     # Execute nam on the trace file
-    # exec nam manet.nam &
+    # exec nam simulation.nam &
     exit 0
 }
 

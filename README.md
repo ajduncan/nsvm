@@ -54,12 +54,12 @@ To rebuild all dependencies and run the experiment again:
 
 ## Running the Simulation Manually ##
 
-The manet simulation is defined interactively (if desired) by running `ns manet.tcl' in the simulation folder.
+The network simulation is defined interactively (if desired) by running `ns simulation.tcl' in the simulation folder.
 
     $ vagrant ssh
 
     $ cd /vagrant/simulation
-	$ ns manet.tcl
+	$ ns simulation.tcl
 
 ## Results ##
 
@@ -69,7 +69,7 @@ the experiment concludes.
 
 ## Report Generation ##
 
-Statistics on dropped packets, protocols, etc can be gathered and reported by parsing the manet.tr file, using
+Statistics on dropped packets, protocols, etc can be gathered and reported by parsing the simulation.tr file, using
 the tran.py utility.
 
     $ vagrant ssh
@@ -77,7 +77,7 @@ the tran.py utility.
 	$ cd /vagrant
 	$ . /home/vagrant/env2/bin/activate
 	(env2) $ pip install -r requirements.txt
-	$ python simulation/tran.py results/manet.tr results/predict.tcl results/predict.txt
+	$ python simulation/tran.py results/simulation.tr results/predict.tcl results/predict.txt
 
 ## ns-2 Tutorials ##
 
