@@ -91,6 +91,15 @@ Notes:
 In order to make this work, you must review the changes to packet.h, etc.
 * VIII & IX - You also need the ns source and tcl/mobility.  
 
+## ns-2 New Protocol Notes ##
+
+See: http://www.isi.edu/nsnam/ns/tutorial/nsnew.html
+See also: http://elmurod.net/en/index.php/archives/157
+and: http://www.nsnam.com/2013/07/wsn-flooding-routing-protocol-wfrp-in.html
+
+This is applicable when implementing a new or existing protocol from research to compare
+results against experiments.
+
 ## ns-2 Examples ##
 
 The Ad-Hoc On-Demand Distance Vector routing, which this project uses to simulate 
