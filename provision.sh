@@ -41,13 +41,21 @@ then
 	echo "Downloading ns-2.35 from sourceforge.net."
 	wget "http://downloads.sourceforge.net/project/nsnam/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz?r=&ts=1395619377&use_mirror=tcpdiag"
 	mv ns-allinone*.tar.gz* ns-allinone-2.35.tar.gz
+
 	echo "Uncompressing tarball."
 	tar xzf ns-allinone-2.35.tar.gz
+
 	echo "Adding environment variables to .bashrc..."
 	cat /vagrant/bashrc_template.txt >> /home/vagrant/.bashrc
-	echo "building ns-2..."
+
+	echo "Inserting ns2_aodv_nop extensions..."
+	cp /vagrant/ns2_aodv_nop/* /home/vagrant/ns-allinone-2.35/ns-2.35/aodv/
+
+	echo "Building ns-2..."
 	cd /home/vagrant/ns-allinone-2.35
-	/home/vagrant/ns-allinone-2.35/install
+	/home/vagrant/ns-allinone-2.35/install > /dev/null 2>&1
+
+	echo "Fixing ownership permissions..."
 	chown -R vagrant:vagrant /home/vagrant/ns-allinone-2.35
 fi
 
