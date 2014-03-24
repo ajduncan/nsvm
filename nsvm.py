@@ -10,7 +10,7 @@ def run_simulation(defaultrng=9999, predict=False):
         print "RNG is {0}".format(defaultrng)
         simulation_process = subprocess.Popen(
             [
-                'ns',
+                '/home/vagrant/ns-allinone-2.35/bin/ns',
                 'simulation/simulation.tcl',
                 '--noinput',
                 '--defaultrng {0}'.format(defaultrng),
@@ -23,7 +23,7 @@ def run_simulation(defaultrng=9999, predict=False):
         print "RNG is {0}".format(defaultrng)
         simulation_process = subprocess.Popen(
             [
-                'ns',
+                '/home/vagrant/ns-allinone-2.35/bin/ns',
                 'simulation/simulation.tcl',
                 '--noinput',
                 '--defaultrng {0}'.format(defaultrng)
