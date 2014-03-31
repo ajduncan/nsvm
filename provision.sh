@@ -48,8 +48,9 @@ then
 	echo "Adding environment variables to .bashrc..."
 	cat /vagrant/bashrc_template.txt >> /home/vagrant/.bashrc
 
-	echo "Inserting ns2_aodv_nop extensions..."
-	cp /vagrant/ns2_aodv_nop/* /home/vagrant/ns-allinone-2.35/ns-2.35/aodv/
+	echo "Inserting aodve extensions..."
+	mkdir /home/vagrant/ns-allinone-2.35/ns-2.35/aodve/
+	cp /vagrant/aodve/* /home/vagrant/ns-allinone-2.35/ns-2.35/aodve/
 
 	echo "Building ns-2..."
 	cd /home/vagrant/ns-allinone-2.35
