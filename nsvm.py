@@ -67,4 +67,4 @@ if __name__ == "__main__":
 
     run_simulation(defaultrng=rng, predict=False)
     run_prediction(virtualenv=virtualenv)
-    # run_simulation(defaultrng=rng, predict=True)
+    run_simulation(defaultrng=rng, predict=True)

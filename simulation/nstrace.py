@@ -32,10 +32,8 @@ re_receive_event = re.compile("^r")
 re_drop_event = re.compile("^d")
 re_forward_event = re.compile("^f")
 
-# We only care about matching ttl presently?
-re_predict_event = re.compile("-t (\d+.\d+) (.*) -Nl MAC (.*) -It ack (.*) -Iv (\d+)")
-re_destination_identifier = re.compile("-Hd (\d+)")
-
+# We only care about matching application layer presently?
+re_predict_event = re.compile("-t (\d+.\d+) (.*) -Nl AGT (.*) -It tcp (.*)")
 
 """ 
 Return node register IDs provided lines from a trace file. 
@@ -64,12 +62,12 @@ def get_prediction_events(lines, src, dst):
         found = re_predict_event.search(line)
         if found:
             node_source = re_node_identifier.search(line)
-            node_destination = re_destination_identifier.search(line)
+            packet_event_found = re_packet_event.search(line)
 
-            if node_source and node_destination:
+            if node_source and packet_event_found:
 
-                if node_source.group(1) == str(src) and node_destination.group(1) == str(dst):
-                    predict_data[found.group(1)] = found.group(5)
+                if node_source.group(1) == str(src):
+                    predict_data[found.group(1)] = packet_event_found.group(2)
 
     return predict_data
 

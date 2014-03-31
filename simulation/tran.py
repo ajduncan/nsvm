@@ -14,12 +14,11 @@ Convert a prediction report for a given interaction of two nodes into ns-2 TCL c
 
 def predict_tcl(tracefile_lines, predict_file, src, dst):
     node_predictions = predict.build_prediction(tracefile_lines, src, dst)
-    predict_fh = open(predict_file, 'w')
+    predict_fh = open(predict_file, 'a')
     if node_predictions:
         for time, prediction in node_predictions.iteritems():
-            if prediction == 1:
-                print("$ns at {0}".format(time, prediction), file=predict_fh)
-                print("\n\n", file=predict_fh)
+            if prediction == True:
+                print("$ns at {0} $tcp_({1}) set packetSize_ 1500".format(time, src), file=predict_fh)
 
 """
 Print a prediction report for a given interaction of two nodes.
@@ -82,7 +81,11 @@ if __name__ == "__main__":
     stat_report_file = args[2]
 
     stat_report(tracefile_lines, stat_report_file, 20)
-    predict_tcl(tracefile_lines, predict_file, 0, 19)
+    # clear the predict report
+    predict_fh = open(predict_file, 'w')
+    predict_fh.close()
+    for i in range(0, 19):
+        predict_tcl(tracefile_lines, predict_file, i, 19 - i)
 
     # assuming we have r nodes, of which one half is futzing around with the other;
     # r = 20

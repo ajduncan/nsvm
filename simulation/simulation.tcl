@@ -149,20 +149,18 @@ for {set i 0} {$i < $val(nn) } { incr i } {
 
 }
 
-# Todo: Allow simulation of *specific* movement across topology for N mobile nodes.
-# for {set i 0} {$i < $val(nn) } { incr i } {
-	# puts [format "$node_($i) at 10.0 setdest %d %d 10.0" [expr round([$topology_ value])] [expr round([$topology_ value])] ]
-	# $ns at 10.0 [format "$node_($i) setdest 400.0 400.0 10.0" [expr $i]]
-# }
-
-
 # DONE: Todo: Allow ftp between j nodes instead of between 0 and N specifically.
-# node 0 as tcp and node 1 as sink
+# DONE: Todo: Change ftp to Constant Bit Rate traffic generator.
+# DONE: Todo: Go back to using FTP, but set the packet_size for TCP dynamically.
+# See: http://www.isi.edu/nsnam/ns/doc/node396.html
+# See: http://mailman.isi.edu/pipermail/ns-users/2008-September/063648.html
+# See: http://www.isi.edu/nsnam/archive/ns-users/webarch/2001/msg00026.html
 
 for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
 	# use nn - i and i e.g. nn = 100 and rqnp = 1, 1:100, 2:99, 3:98, ... 49:51
 
-	set tcp_($i) [new Agent/TCP/Newreno]
+	set tcp_($i) [new Agent/TCP]
+	$tcp_($i) set packetSize_ 1000
 	$ns attach-agent $node_($i) $tcp_($i)
 
 	set sink_($i) [new Agent/TCPSink]
@@ -170,10 +168,19 @@ for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
 
 	$ns connect $tcp_($i) $sink_($i)
 
+	# set cbr_($i) [new Application/Traffic/CBR]
+	# $cbr_($i) attach-agent $tcp_($i)
+	# $cbr_($i) set type_ CBR
+	# $cbr_($i) set packet_size_ 1000
+	# $cbr_($i) set rate_ 1mb
+	# $cbr_($i) set random_ false
+	# $ns at 10.0 "$cbr_($i) start"
+
+	# ftp sends as fast as possible, unlike CBR.
 	set ftp_($i) [new Application/FTP]
 	$ftp_($i) attach-agent $tcp_($i)
+	$ftp_($i) set maxpkts 100000
 	$ns at 10.0 "$ftp_($i) start"
-
 }
 
 if { [file exists "predict.tcl" ] } {
@@ -197,5 +204,4 @@ proc stop {} {
     exit 0
 }
 
-#Call the finish procedure after 5 seconds of simulation time
 $ns run

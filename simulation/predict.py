@@ -61,20 +61,22 @@ Provided tracefile data in nstrace format, predict if dst node will fall out of 
 
 
 def build_prediction(tracefile_lines, src, dst):
+    tcp_packet_size = 1000
     prediction = {}
-    ttl_history = []
-    avg_ttl_history = 0
+    throughput_history = []
+    avg_throughput_history = 0
 
     events = trace.get_prediction_events(tracefile_lines, src, dst)
-    for time, ttl in events.iteritems():
-        # build a history :C
-        ttl_history.append(ttl)
-        if len(ttl_history) > 1:
-            avg_ttl_history = reduce(
-                lambda x, y: x + y, ttl_history) / len(ttl_history)
+    for time, packet_size in events.iteritems():
+        # build a history
+        throughput = (int(packet_size) * 8)/tcp_packet_size
+        throughput_history.append(throughput)
+        if len(throughput_history) > 1:
+            avg_throughput_history = reduce(
+                lambda x, y: x + y, throughput_history) / len(throughput_history)
 
             # make a prediction :\
-        if ttl <= avg_ttl_history:
+        if throughput <= avg_throughput_history:
             prediction[time] = False
         else:
             prediction[time] = True
