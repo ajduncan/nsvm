@@ -32,9 +32,6 @@ proc setup {} {
 	set noinput 0
 	# result folder for experiments
 	set results ./results
-	set val(tracefd_file)	"$results/simulation.tr"
-	set val(namtrace_file)	"$results/simulation.nam"
-	set val(predict_file)	"$results/predict.tcl"
 
 	if {$argc > 0} {
 		for {set i 0} {$i < $argc } { incr i } {
@@ -49,8 +46,20 @@ proc setup {} {
 				}
 			}
 
+			if {[lindex $argv $i] == "--results"} {
+				if {$argc > [expr $i + 1]} {
+					# result folder for experiments
+					set a [lindex $argv [expr $i + 1]]
+					set results "./results/$a"
+				}
+			}
 		}
 	}
+
+	set val(tracefd_file)	"$results/simulation.tr"
+	set val(namtrace_file)	"$results/simulation.nam"
+	set val(predict_file)	"$results/predict.tcl"
+
 
 	if {$noinput == 0} {
 		puts "Run interactive setup?"
@@ -183,7 +192,7 @@ for {set i 0} {$i < [expr int($val(nn) * $val(rqnp))] } { incr i} {
 	$ns at 10.0 "$ftp_($i) start"
 }
 
-if { [file exists "predict.tcl" ] } {
+if { [file exists $val(predict_file) ] } {
 	# include result of predict in the form of:
 	# $ns at <time> "<whatever>"
 	source $val(predict_file)
