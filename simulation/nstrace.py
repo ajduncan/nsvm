@@ -35,10 +35,14 @@ re_forward_event = re.compile("^f")
 # We only care about matching application layer presently?
 re_predict_event = re.compile("-t (\d+.\d+) (.*) -Nl AGT (.*) -It tcp (.*)")
 
-""" 
-Return node register IDs provided lines from a trace file. 
-"""
+
 def get_nodes(lines):
+    """ 
+    Return node register IDs provided lines from a trace file. 
+
+    :param lines:
+        The lines from the trace file to be searched.
+    """
 
     nodes = []
     for line in lines:
@@ -51,10 +55,19 @@ def get_nodes(lines):
 
     return nodes
 
-"""
-Provided lines, src and dst, build prediction event data for the predictor.
-"""
+
 def get_prediction_events(lines, src, dst):
+    """
+    Provided lines, src and dst, build prediction event data for the predictor.
+
+    :param lines:
+        The lines from the trace file to be searched.
+    :param src:
+        The source node of interest when getting prediction events.
+    :param dst:
+        The destination node of interest when getting prediction events.
+    """
+
     predict_data = {'0': '999'}
 
     for line in lines:
@@ -72,10 +85,16 @@ def get_prediction_events(lines, src, dst):
     return predict_data
 
 
-""" 
-Return packet statistics for a given node.
-"""
 def get_packet_statistics(lines, node):
+    """ 
+    Return packet statistics for a given node.  These statistics include:
+    dropped packets, received packets, sent packets, forwarded packets and features of dropped packets.
+
+    :param lines:
+        The lines from the trace file to be searched.
+    :param node:
+        The node of interest.
+    """
 
     dropped_packets = [0,]
     dp_features = []

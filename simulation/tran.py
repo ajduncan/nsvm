@@ -7,12 +7,22 @@ import optparse
 import predict
 
 
-"""
-Convert a prediction report for a given interaction of two nodes into ns-2 TCL commands.
-"""
-
-
 def predict_tcl(tracefile_lines, predict_file, max_nodes, src, dst):
+    """
+    Convert a prediction report for a given interaction of two nodes into ns-2 TCL commands.
+
+    :param tracefile_lines:
+        The path to the ns-2 tracefile.
+    :param predict_file:
+        The path to the predict tcl file to write predictions for use in ns-2.
+    :param max_nodes:
+        The maximum number of nodes in the simulation, used to infer the TCP agent between two nodes.
+    :param src:
+        The source node involved in the prediction.
+    :param dst:
+        The destination node involved in the prediction.
+    """
+
     node_predictions = predict.build_prediction(tracefile_lines, src, dst)
     predict_fh = open(predict_file, 'a')
     if node_predictions:
@@ -23,12 +33,21 @@ def predict_tcl(tracefile_lines, predict_file, max_nodes, src, dst):
                 if not src > max_nodes/2:
                     print("$ns at {0} \"$tcp_({1}) set packetSize_ 1500\"".format(time, src), file=predict_fh)
 
-"""
-Print a prediction report for a given interaction of two nodes.
-"""
-
 
 def predict_report(tracefile_lines, stat_report_fh, src, dst):
+    """
+    Print a prediction report for a given interaction of two nodes.
+
+    :param tracefile_lines:
+        The path to the ns-2 tracefile.
+    :param stat_report_fh:
+        The file handle for the statistics report file.
+    :param src:
+        The source node in the simulation.
+    :param dst:
+        The destination node in the simulation.
+    """
+
     print(
         "################################################################################\n",
         file=stat_report_fh)
@@ -45,13 +64,19 @@ def predict_report(tracefile_lines, stat_report_fh, src, dst):
             print("\n\n", file=stat_report_fh)
 
 
-"""
-Print node statistics report for every node in the simulation,
-with r = number of nodes.
-"""
-
-
 def stat_report(tracefile_lines, stat_report_file, r):
+    """
+    Print node statistics report for every node in the simulation,
+    with r = number of nodes.
+
+    :param tracefile_lines:
+        The path to the ns-2 tracefile.
+    :param stat_report_file:
+        The path to the statistics report file.
+    :param r:
+        The number of nodes in the simulation.
+    """
+
     stat_report_fh = open(stat_report_file, 'w')
     node_stats = predict.build_stats(tracefile_lines)
 

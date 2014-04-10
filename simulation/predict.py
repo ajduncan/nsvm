@@ -10,23 +10,21 @@ from __future__ import print_function
 import nstrace as trace
 
 
-"""
-Get tracefile data as lines from the file.
-"""
-
-
 def get_tracefile_data(filename):
+    """
+    Get tracefile data as lines from the file.
+    """
+
     tracefile_fd = open(filename, 'r')
     tracefile_lines = tracefile_fd.readlines()
     return tracefile_lines
 
 
-"""
-Generate node statistics given trace file in nstrace format.
-"""
-
-
 def build_stats(tracefile_data):
+    """
+    Generate node statistics given trace file in nstrace format.
+    """
+
     nodes = trace.get_nodes(tracefile_data)
     node_stats = {}
     for node in nodes:
@@ -36,12 +34,11 @@ def build_stats(tracefile_data):
     return node_stats
 
 
-"""
-Provided node stats, and node_id, generate a report.
-"""
-
-
 def ns_report(node_stats, stat_report_fh, node_id):
+    """
+    Provided node stats, and node_id, generate a report.
+    """
+
     print("Dropped packet size for {0}: {1}".format(
         node_id, node_stats[node_id][0]), file=stat_report_fh)
     print("Time sequenced reason for dropped packets: ", file=stat_report_fh)
@@ -55,12 +52,11 @@ def ns_report(node_stats, stat_report_fh, node_id):
         node_id, node_stats[node_id][2]), file=stat_report_fh)
 
 
-"""
-Provided tracefile data in nstrace format, predict if dst node will fall out of range from src.
-"""
-
-
 def build_prediction(tracefile_lines, src, dst):
+    """
+    Provided tracefile data in nstrace format, predict if dst node will fall out of range from src.
+    """
+
     tcp_packet_size = 1000
     prediction = {}
     throughput_history = []
