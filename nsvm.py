@@ -30,8 +30,10 @@ def run_simulation(defaultrng=9999, predict=False):
                 '/home/vagrant/ns-allinone-2.35/bin/ns',
                 'simulation/simulation.tcl',
                 '--noinput',
-                '--defaultrng {0}'.format(defaultrng),
-                '--results with_prediction',
+                '--defaultrng',
+                '{0}'.format(defaultrng),
+                '--results',
+                'with_prediction',
                 '--predict'
             ],
             stdout=open('/dev/null', 'w'),
@@ -44,8 +46,10 @@ def run_simulation(defaultrng=9999, predict=False):
                 '/home/vagrant/ns-allinone-2.35/bin/ns',
                 'simulation/simulation.tcl',
                 '--noinput',
-                '--defaultrng {0}'.format(defaultrng),
-                '--results without_prediction'
+                '--defaultrng',
+                '{0}'.format(defaultrng),
+                '--results',
+                'without_prediction'
             ],
             stdout=open('/dev/null', 'w'),
             stderr=open('/dev/null', 'w'))
@@ -122,9 +126,11 @@ def compare_reports(without_prediction, with_prediction, max_nodes):
 
     without_fh = open(without_prediction, 'r')
     without_lines = without_fh.readlines()
+    without_fh.close()
 
     with_fh = open(with_prediction, 'r')
     with_lines = with_fh.readlines()
+    with_fh.close()
 
     for line in without_lines:
         found = re_droppedpacket_report.search(line)
