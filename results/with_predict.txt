@@ -4,31 +4,63 @@ Node Stats for: 0
 
 ################################################################################
 
-Dropped packet size for 0: 30506
+Dropped packet size for 0: 52510
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 11.195776911
-reason: ---
-time: 11.484870719
-reason: ---
-time: 11.484870719
-reason: ---
-time: 11.605242303
-reason: ---
-time: 11.607149297
 reason: CBK
-time: 33.379021024
+time: 24.184280428
+reason: CBK
+time: 24.184280428
 reason: RET
-time: 33.379021024
+time: 24.184280428
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: CBK
+time: 40.599705674
+reason: RET
+time: 40.599705674
+reason: COL
+time: 42.573136075
 reason: ---
-time: 67.772847189
+time: 60.854136803
 reason: ---
-time: 83.423419539
-reason: ---
-time: 84.741074247
-reason: ---
-time: 99.145788570
-Received packet size for 0: 1122192
+time: 62.527233228
+reason: ARP
+time: 70.048758521
+reason: CBK
+time: 72.226367591
+reason: CBK
+time: 72.226367591
+reason: CBK
+time: 72.226367591
+reason: CBK
+time: 72.226367591
+reason: RET
+time: 72.226367591
+reason: COL
+time: 74.696494620
+reason: CBK
+time: 79.474098053
+reason: CBK
+time: 79.474098053
+reason: CBK
+time: 79.474098053
+reason: RET
+time: 79.474098053
+Received packet size for 0: 664160
 Sent packet size for 0: 0
 ################################################################################
 
@@ -36,7 +68,7 @@ Time series node predictions: 0->-20
 
 ################################################################################
 
-T: 95.935801490 P: True
+T: 13.883623922 P: True
 
 
 
@@ -49,51 +81,81 @@ Node Stats for: 1
 
 ################################################################################
 
-Dropped packet size for 1: 44030
+Dropped packet size for 1: 67440
 Time sequenced reason for dropped packets: 
-reason: COL
-time: 38.914897532
 reason: ---
-time: 52.683295321
+time: 10.975354801
 reason: ---
-time: 52.763997565
+time: 10.975354801
 reason: ---
-time: 62.787273634
+time: 10.977601360
 reason: ---
-time: 63.076517079
+time: 10.977601360
+reason: ---
+time: 11.084045979
 reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: CBK
-time: 67.961160828
-reason: CBK
-time: 67.961160828
-reason: CBK
-time: 67.961160828
-reason: CBK
-time: 67.961160828
+time: 18.179317585
 reason: RET
-time: 67.961160828
+time: 18.179317585
 reason: ---
-time: 98.402298626
+time: 28.982813552
 reason: ---
-time: 98.493991685
+time: 29.035455714
 reason: ---
-time: 98.871011882
+time: 38.645300929
+reason: COL
+time: 42.573135994
+reason: COL
+time: 55.420573233
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: CBK
+time: 60.662252641
+reason: RET
+time: 60.662252641
+reason: CBK
+time: 61.601283378
+reason: CBK
+time: 61.601283378
+reason: CBK
+time: 61.601283378
+reason: CBK
+time: 61.601283378
+reason: RET
+time: 61.601283378
+reason: COL
+time: 74.696494769
 reason: ---
-time: 98.888784654
+time: 86.215988707
 reason: ---
-time: 99.185221404
+time: 86.217834915
 reason: ---
-time: 99.221238482
-Received packet size for 1: 883964
+time: 86.239346517
+Received packet size for 1: 958756
 Sent packet size for 1: 0
 ################################################################################
 
@@ -101,7 +163,7 @@ Time series node predictions: 1->-19
 
 ################################################################################
 
-T: 91.006476039 P: True
+T: 36.182740775 P: True
 
 
 
@@ -114,47 +176,133 @@ Node Stats for: 2
 
 ################################################################################
 
-Dropped packet size for 2: 38134
+Dropped packet size for 2: 119890
 Time sequenced reason for dropped packets: 
 reason: ---
-time: 35.918603263
+time: 11.850815311
 reason: ---
-time: 35.922352653
+time: 11.903395479
 reason: ---
-time: 36.329087676
+time: 11.903395479
 reason: ---
-time: 46.712464291
+time: 11.969911682
 reason: ---
-time: 46.833623803
+time: 12.001387176
 reason: ---
-time: 46.853952963
+time: 12.003745383
 reason: ---
-time: 46.853952963
+time: 12.024707817
 reason: ---
-time: 60.820447955
+time: 12.037597155
 reason: ---
-time: 73.170739155
+time: 12.045753220
 reason: ---
-time: 74.565652240
+time: 12.112069516
 reason: ---
-time: 74.619685812
+time: 12.206463240
 reason: ---
-time: 87.084763813
+time: 14.421674814
 reason: ---
-time: 87.100475211
+time: 14.421674814
 reason: ---
-time: 88.512360368
+time: 14.421674814
 reason: ---
-time: 90.137518217
+time: 14.421674814
+reason: ---
+time: 33.073149022
+reason: ---
+time: 33.865361023
 reason: CBK
-time: 94.244993727
+time: 35.190193401
 reason: CBK
-time: 94.244993727
+time: 35.190193401
 reason: CBK
-time: 94.244993727
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
+reason: CBK
+time: 35.190193401
 reason: RET
-time: 94.244993727
-Received packet size for 2: 1080228
+time: 35.190193401
+reason: COL
+time: 42.573136039
+reason: ---
+time: 43.276686197
+reason: ---
+time: 44.865627933
+reason: ---
+time: 45.879595618
+reason: ---
+time: 46.211011141
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: CBK
+time: 46.964553019
+reason: RET
+time: 46.964553019
+reason: COL
+time: 55.420572888
+reason: COL
+time: 74.696494520
+reason: ---
+time: 75.353214726
+reason: ---
+time: 75.635629292
+reason: ---
+time: 76.049689623
+reason: ---
+time: 76.223354761
+reason: ---
+time: 76.621761284
+reason: ---
+time: 77.014911223
+reason: ---
+time: 77.531286347
+reason: ---
+time: 78.053214726
+reason: COL
+time: 97.907073154
+Received packet size for 2: 1526572
 Sent packet size for 2: 0
 ################################################################################
 
@@ -162,7 +310,7 @@ Time series node predictions: 2->-18
 
 ################################################################################
 
-T: 29.571289438 P: True
+T: 98.404405590 P: True
 
 
 
@@ -175,33 +323,43 @@ Node Stats for: 3
 
 ################################################################################
 
-Dropped packet size for 3: 32698
+Dropped packet size for 3: 44938
 Time sequenced reason for dropped packets: 
 reason: ---
-time: 10.517386601
+time: 10.683135136
 reason: ---
-time: 10.572399290
+time: 10.706579721
 reason: ---
-time: 10.608012108
+time: 10.706579721
 reason: ---
-time: 10.688743162
+time: 10.741934378
 reason: ---
-time: 26.868581745
+time: 10.817426495
 reason: ---
-time: 38.948962355
+time: 14.659149103
 reason: ---
-time: 38.954657808
+time: 14.945218039
+reason: COL
+time: 42.573136275
+reason: COL
+time: 74.696494445
 reason: ---
-time: 39.039601527
+time: 75.631315960
 reason: ---
-time: 42.444900514
+time: 76.424577955
 reason: ---
-time: 42.668260959
+time: 76.426462742
 reason: ---
-time: 64.706024400
+time: 76.426462742
 reason: ---
-time: 64.810665239
-Received packet size for 3: 1175892
+time: 76.478388952
+reason: ---
+time: 76.563430402
+reason: ---
+time: 76.627356330
+reason: COL
+time: 97.907073224
+Received packet size for 3: 1252300
 Sent packet size for 3: 0
 ################################################################################
 
@@ -209,7 +367,7 @@ Time series node predictions: 3->-17
 
 ################################################################################
 
-T: 34.598605747 P: True
+T: 10.615931586 P: True
 
 
 
@@ -222,9 +380,63 @@ Node Stats for: 4
 
 ################################################################################
 
-Dropped packet size for 4: 13674
+Dropped packet size for 4: 58544
 Time sequenced reason for dropped packets: 
-Received packet size for 4: 674552
+reason: ---
+time: 27.545948389
+reason: ---
+time: 27.545948389
+reason: ---
+time: 27.548134757
+reason: ---
+time: 33.869781044
+reason: ---
+time: 34.286038892
+reason: ---
+time: 39.073600875
+reason: ---
+time: 39.521424004
+reason: ---
+time: 40.047594472
+reason: ---
+time: 40.227880793
+reason: ---
+time: 40.611439996
+reason: COL
+time: 42.573136268
+reason: ---
+time: 46.694110671
+reason: ---
+time: 47.052589288
+reason: CBK
+time: 55.282596108
+reason: CBK
+time: 55.282596108
+reason: CBK
+time: 55.282596108
+reason: CBK
+time: 55.282596108
+reason: CBK
+time: 55.282596108
+reason: CBK
+time: 55.282596108
+reason: RET
+time: 55.282596108
+reason: ---
+time: 71.746230723
+reason: ---
+time: 71.873743625
+reason: ---
+time: 71.876108281
+reason: ---
+time: 73.502345259
+reason: ---
+time: 81.886455814
+reason: ---
+time: 82.009804360
+reason: COL
+time: 97.907073326
+Received packet size for 4: 1483980
 Sent packet size for 4: 0
 ################################################################################
 
@@ -232,7 +444,7 @@ Time series node predictions: 4->-16
 
 ################################################################################
 
-T: 87.586272751 P: True
+T: 33.331278644 P: True
 
 
 
@@ -245,9 +457,65 @@ Node Stats for: 5
 
 ################################################################################
 
-Dropped packet size for 5: 13510
+Dropped packet size for 5: 62628
 Time sequenced reason for dropped packets: 
-Received packet size for 5: 325364
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: CBK
+time: 18.705061340
+reason: RET
+time: 18.705061340
+reason: ---
+time: 32.138598996
+reason: ---
+time: 32.138598996
+reason: COL
+time: 42.573136330
+reason: ---
+time: 44.897129495
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: CBK
+time: 74.647613641
+reason: RET
+time: 74.647613641
+reason: COL
+time: 97.907073334
+Received packet size for 5: 953032
 Sent packet size for 5: 0
 ################################################################################
 
@@ -255,7 +523,7 @@ Time series node predictions: 5->-15
 
 ################################################################################
 
-T: 29.857928567 P: True
+T: 24.203844863 P: True
 
 
 
@@ -268,109 +536,103 @@ Node Stats for: 6
 
 ################################################################################
 
-Dropped packet size for 6: 87692
+Dropped packet size for 6: 72182
 Time sequenced reason for dropped packets: 
 reason: ---
-time: 13.080218990
+time: 10.755472889
 reason: ---
-time: 13.080218990
+time: 10.799836018
 reason: ---
-time: 13.107768951
+time: 10.813714301
 reason: ---
-time: 13.107768951
+time: 10.813714301
 reason: ---
-time: 13.267124485
+time: 10.903977338
 reason: ---
-time: 26.560248138
+time: 14.460951114
 reason: ---
-time: 30.330248138
-reason: ---
-time: 31.062960797
-reason: ---
-time: 32.251831114
-reason: ---
-time: 33.899052592
-reason: ---
-time: 33.942337720
+time: 14.517177893
 reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: CBK
-time: 38.864958429
-reason: CBK
-time: 38.864958429
-reason: CBK
-time: 38.864958429
-reason: CBK
-time: 38.864958429
-reason: CBK
-time: 38.864958429
-reason: CBK
-time: 38.864958429
+time: 14.619883074
 reason: RET
-time: 38.864958429
+time: 14.619883074
 reason: ---
-time: 63.497680966
+time: 20.751799733
+reason: ---
+time: 21.135853444
+reason: ---
+time: 21.159550485
+reason: ---
+time: 21.500610071
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
-reason: CBK
-time: 86.885989119
+time: 24.012812091
 reason: RET
-time: 86.885989119
+time: 24.012812091
+reason: ---
+time: 36.074467212
+reason: ---
+time: 37.062458265
+reason: ---
+time: 38.643414736
+reason: ---
+time: 39.069187910
+reason: ---
+time: 41.849815687
+reason: COL
+time: 42.573135919
 reason: CBK
-time: 91.799658988
+time: 51.797282845
 reason: CBK
-time: 91.799658988
+time: 51.797282845
 reason: CBK
-time: 91.799658988
+time: 51.797282845
+reason: CBK
+time: 51.797282845
+reason: CBK
+time: 51.797282845
+reason: CBK
+time: 51.797282845
 reason: RET
-time: 91.799658988
-reason: CBK
-time: 94.134810228
-reason: CBK
-time: 94.134810228
-reason: CBK
-time: 94.134810228
-reason: CBK
-time: 94.134810228
-reason: CBK
-time: 94.134810228
-reason: CBK
-time: 94.134810228
-reason: RET
-time: 94.134810228
-Received packet size for 6: 849404
+time: 51.797282845
+reason: COL
+time: 55.420573094
+reason: COL
+time: 74.696494610
+reason: ---
+time: 82.825764854
+reason: ---
+time: 84.132753446
+reason: ---
+time: 94.630718969
+reason: ---
+time: 94.694426464
+reason: ---
+time: 94.709327547
+Received packet size for 6: 1191888
 Sent packet size for 6: 0
 ################################################################################
 
@@ -378,7 +640,7 @@ Time series node predictions: 6->-14
 
 ################################################################################
 
-T: 12.945195836 P: True
+T: 38.643389736 P: True
 
 
 
@@ -391,15 +653,99 @@ Node Stats for: 7
 
 ################################################################################
 
-Dropped packet size for 7: 20428
+Dropped packet size for 7: 83990
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 70.593674195
-reason: ---
-time: 86.607012646
-reason: ---
-time: 86.943541461
-Received packet size for 7: 651680
+reason: CBK
+time: 21.017833687
+reason: CBK
+time: 21.017833687
+reason: CBK
+time: 21.017833687
+reason: RET
+time: 21.017833687
+reason: CBK
+time: 26.780637372
+reason: CBK
+time: 26.780637372
+reason: CBK
+time: 26.780637372
+reason: CBK
+time: 26.780637372
+reason: CBK
+time: 26.780637372
+reason: RET
+time: 26.780637372
+reason: CBK
+time: 52.032025630
+reason: CBK
+time: 52.032025630
+reason: CBK
+time: 52.032025630
+reason: CBK
+time: 52.032025630
+reason: CBK
+time: 52.032025630
+reason: CBK
+time: 52.032025630
+reason: RET
+time: 52.032025630
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: CBK
+time: 71.058208978
+reason: RET
+time: 71.058208978
+reason: COL
+time: 74.696494958
+reason: CBK
+time: 79.493149639
+reason: CBK
+time: 79.493149639
+reason: CBK
+time: 79.493149639
+reason: CBK
+time: 79.493149639
+reason: CBK
+time: 79.493149639
+reason: RET
+time: 79.493149639
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: CBK
+time: 97.821094323
+reason: RET
+time: 97.821094323
+Received packet size for 7: 554084
 Sent packet size for 7: 0
 ################################################################################
 
@@ -407,7 +753,7 @@ Time series node predictions: 7->-13
 
 ################################################################################
 
-T: 95.860736139 P: True
+T: 44.689634909 P: True
 
 
 
@@ -420,25 +766,149 @@ Node Stats for: 8
 
 ################################################################################
 
-Dropped packet size for 8: 28662
+Dropped packet size for 8: 87964
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 11.664770760
-reason: ---
-time: 23.671863862
-reason: ---
-time: 23.809029684
-reason: ---
-time: 41.307081107
-reason: ---
-time: 41.330262690
-reason: ARP
-time: 50.568584770
-reason: ---
-time: 55.997348527
-reason: ---
-time: 88.802201134
-Received packet size for 8: 1309956
+reason: CBK
+time: 41.790598451
+reason: CBK
+time: 41.790598451
+reason: CBK
+time: 41.790598451
+reason: CBK
+time: 41.790598451
+reason: CBK
+time: 41.790598451
+reason: RET
+time: 41.790598451
+reason: COL
+time: 42.573136535
+reason: CBK
+time: 44.823372553
+reason: CBK
+time: 44.823372553
+reason: RET
+time: 44.823372553
+reason: CBK
+time: 47.550366236
+reason: CBK
+time: 47.550366236
+reason: CBK
+time: 47.550366236
+reason: CBK
+time: 47.550366236
+reason: CBK
+time: 47.550366236
+reason: CBK
+time: 47.550366236
+reason: RET
+time: 47.550366236
+reason: CBK
+time: 49.307294643
+reason: RET
+time: 49.307294643
+reason: CBK
+time: 52.163241470
+reason: CBK
+time: 52.163241470
+reason: CBK
+time: 52.163241470
+reason: CBK
+time: 52.163241470
+reason: RET
+time: 52.163241470
+reason: CBK
+time: 53.582879789
+reason: CBK
+time: 53.582879789
+reason: RET
+time: 53.582879789
+reason: COL
+time: 55.420573319
+reason: CBK
+time: 56.502584683
+reason: CBK
+time: 56.502584683
+reason: RET
+time: 56.502584683
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: CBK
+time: 64.911685968
+reason: RET
+time: 64.911685968
+reason: COL
+time: 74.696494898
+reason: CBK
+time: 75.659849123
+reason: CBK
+time: 75.659849123
+reason: CBK
+time: 75.659849123
+reason: CBK
+time: 75.659849123
+reason: RET
+time: 75.659849123
+reason: CBK
+time: 80.521344344
+reason: CBK
+time: 80.521344344
+reason: CBK
+time: 80.521344344
+reason: CBK
+time: 80.521344344
+reason: RET
+time: 80.521344344
+reason: CBK
+time: 83.975713533
+reason: CBK
+time: 83.975713533
+reason: CBK
+time: 83.975713533
+reason: CBK
+time: 83.975713533
+reason: RET
+time: 83.975713533
+reason: CBK
+time: 88.721428798
+reason: CBK
+time: 88.721428798
+reason: CBK
+time: 88.721428798
+reason: CBK
+time: 88.721428798
+reason: CBK
+time: 88.721428798
+reason: RET
+time: 88.721428798
+reason: CBK
+time: 98.793752733
+reason: CBK
+time: 98.793752733
+reason: CBK
+time: 98.793752733
+reason: CBK
+time: 98.793752733
+reason: CBK
+time: 98.793752733
+reason: RET
+time: 98.793752733
+Received packet size for 8: 275748
 Sent packet size for 8: 0
 ################################################################################
 
@@ -446,7 +916,7 @@ Time series node predictions: 8->-12
 
 ################################################################################
 
-T: 64.058135564 P: True
+T: 51.810510241 P: True
 
 
 
@@ -459,11 +929,127 @@ Node Stats for: 9
 
 ################################################################################
 
-Dropped packet size for 9: 18640
+Dropped packet size for 9: 90344
 Time sequenced reason for dropped packets: 
+reason: CBK
+time: 14.479500206
+reason: CBK
+time: 14.479500206
+reason: CBK
+time: 14.479500206
+reason: CBK
+time: 14.479500206
+reason: CBK
+time: 14.479500206
+reason: CBK
+time: 14.479500206
+reason: RET
+time: 14.479500206
+reason: CBK
+time: 18.172317154
+reason: CBK
+time: 18.172317154
+reason: RET
+time: 18.172317154
+reason: CBK
+time: 29.237761401
+reason: CBK
+time: 29.237761401
+reason: CBK
+time: 29.237761401
+reason: CBK
+time: 29.237761401
+reason: CBK
+time: 29.237761401
+reason: CBK
+time: 29.237761401
+reason: RET
+time: 29.237761401
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: CBK
+time: 41.499655666
+reason: RET
+time: 41.499655666
 reason: COL
-time: 38.914897746
-Received packet size for 9: 402512
+time: 55.420573123
+reason: CBK
+time: 57.052760184
+reason: CBK
+time: 57.052760184
+reason: CBK
+time: 57.052760184
+reason: CBK
+time: 57.052760184
+reason: CBK
+time: 57.052760184
+reason: RET
+time: 57.052760184
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: CBK
+time: 60.989060707
+reason: RET
+time: 60.989060707
+reason: COL
+time: 74.696494794
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: CBK
+time: 80.528268451
+reason: RET
+time: 80.528268451
+reason: COL
+time: 97.907072905
+Received packet size for 9: 596308
 Sent packet size for 9: 0
 ################################################################################
 
@@ -471,7 +1057,7 @@ Time series node predictions: 9->-11
 
 ################################################################################
 
-T: 45.389622058 P: True
+T: 63.388804172 P: True
 
 
 
@@ -484,159 +1070,37 @@ Node Stats for: 10
 
 ################################################################################
 
-Dropped packet size for 10: 14910
+Dropped packet size for 10: 30864
 Time sequenced reason for dropped packets: 
+reason: ARP
+time: 13.608399175
+reason: COL
+time: 42.573136490
 reason: CBK
-time: 14.796527028
+time: 49.299536780
 reason: CBK
-time: 14.796527028
+time: 49.299536780
+reason: CBK
+time: 49.299536780
+reason: CBK
+time: 49.299536780
+reason: CBK
+time: 49.299536780
+reason: CBK
+time: 49.299536780
+reason: CBK
+time: 49.299536780
+reason: CBK
+time: 49.299536780
 reason: RET
-time: 14.796527028
-reason: CBK
-time: 19.822308255
-reason: RET
-time: 19.822308255
-reason: CBK
-time: 32.069797739
-reason: CBK
-time: 32.069797739
-reason: CBK
-time: 32.069797739
-reason: CBK
-time: 32.069797739
-reason: CBK
-time: 32.069797739
-reason: RET
-time: 32.069797739
-reason: ---
-time: 41.073949881
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: CBK
-time: 43.127500637
-reason: RET
-time: 43.127500637
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: CBK
-time: 46.782090104
-reason: RET
-time: 46.782090104
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: CBK
-time: 52.896555207
-reason: RET
-time: 52.896555207
-reason: CBK
-time: 58.531144922
-reason: CBK
-time: 58.531144922
-reason: CBK
-time: 58.531144922
-reason: CBK
-time: 58.531144922
-reason: CBK
-time: 58.531144922
-reason: CBK
-time: 58.531144922
-reason: RET
-time: 58.531144922
-reason: CBK
-time: 64.023991142
-reason: RET
-time: 64.023991142
-reason: CBK
-time: 69.669830230
-reason: CBK
-time: 69.669830230
-reason: CBK
-time: 69.669830230
-reason: CBK
-time: 69.669830230
-reason: CBK
-time: 69.669830230
-reason: CBK
-time: 69.669830230
-reason: RET
-time: 69.669830230
-reason: CBK
-time: 73.865898769
-reason: CBK
-time: 73.865898769
-reason: CBK
-time: 73.865898769
-reason: CBK
-time: 73.865898769
-reason: CBK
-time: 73.865898769
-reason: RET
-time: 73.865898769
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: CBK
-time: 89.524814743
-reason: RET
-time: 89.524814743
-Received packet size for 10: 687272
+time: 49.299536780
+reason: COL
+time: 55.420573100
+reason: COL
+time: 74.696494701
+reason: COL
+time: 97.907073151
+Received packet size for 10: 1034776
 Sent packet size for 10: 0
 ################################################################################
 
@@ -644,7 +1108,7 @@ Time series node predictions: 10->-10
 
 ################################################################################
 
-T: 81.482238956 P: True
+T: 75.491847548 P: True
 
 
 
@@ -657,253 +1121,15 @@ Node Stats for: 11
 
 ################################################################################
 
-Dropped packet size for 11: 58798
+Dropped packet size for 11: 24286
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 11.101382920
-reason: ---
-time: 11.235338070
-reason: ---
-time: 11.265861008
-reason: ---
-time: 11.317393404
-reason: ---
-time: 11.339010471
-reason: ---
-time: 12.686851278
-reason: ---
-time: 12.815506053
-reason: ---
-time: 12.841207193
-reason: ---
-time: 12.933449712
-reason: ---
-time: 12.943334543
-reason: ---
-time: 17.648675245
-reason: ---
-time: 17.732232908
-reason: ---
-time: 17.746117687
-reason: ---
-time: 17.749888052
-reason: ---
-time: 17.940059017
-reason: ---
-time: 18.302932453
-reason: ---
-time: 18.463249963
-reason: ---
-time: 18.572875950
-reason: ---
-time: 18.616188232
-reason: ---
-time: 18.626014612
-reason: ---
-time: 18.635940991
-reason: ---
-time: 18.681571183
-reason: ---
-time: 18.841428873
-reason: ---
-time: 18.871068226
-reason: ---
-time: 19.002192305
-reason: ---
-time: 19.045607763
-reason: ---
-time: 19.673071150
-reason: ---
-time: 19.746268001
-reason: ---
-time: 19.908812388
-reason: ---
-time: 19.944355740
-reason: ---
-time: 19.958480546
-reason: ---
-time: 23.296954361
-reason: ---
-time: 23.310859262
-reason: ---
-time: 23.322761086
-reason: ---
-time: 23.346763049
-reason: ---
-time: 24.206627780
-reason: ---
-time: 24.225119789
-reason: ---
-time: 24.749616787
-reason: ---
-time: 25.081428871
-reason: ---
-time: 25.208819104
-reason: ---
-time: 28.591809059
-reason: ---
-time: 28.623450029
-reason: ---
-time: 28.674679835
-reason: ---
-time: 28.757741174
-reason: ---
-time: 30.878341428
-reason: ---
-time: 31.066684277
-reason: ---
-time: 31.075503607
-reason: ---
-time: 31.646135387
-reason: ---
-time: 31.736970291
-reason: ---
-time: 31.782622955
-reason: ---
-time: 32.251906789
-reason: ---
-time: 32.289632847
-reason: ---
-time: 32.411621721
-reason: ---
-time: 32.436776804
-reason: ---
-time: 33.492007712
-reason: ---
-time: 37.062911255
-reason: ---
-time: 37.132373016
-reason: ---
-time: 37.261433570
+reason: ARP
+time: 39.047970045
 reason: COL
-time: 38.914897925
-reason: ---
-time: 39.066247878
-reason: ---
-time: 39.264462499
-reason: ---
-time: 50.570390284
-reason: ---
-time: 53.226979322
-reason: ---
-time: 53.324739270
-reason: ---
-time: 62.474675492
-reason: ---
-time: 62.488501765
-reason: ---
-time: 62.557570611
-reason: ---
-time: 62.741248337
-reason: ---
-time: 62.785388102
-reason: ---
-time: 62.815024784
-reason: ---
-time: 62.842607045
-reason: ---
-time: 62.856473311
-reason: ---
-time: 64.255609519
-reason: ---
-time: 64.816872908
-reason: ---
-time: 68.790832889
-reason: ---
-time: 68.862535859
-reason: ---
-time: 68.878247470
-reason: ---
-time: 69.560441334
-reason: CBK
-time: 69.630324963
-reason: CBK
-time: 69.630324963
-reason: CBK
-time: 69.630324963
-reason: CBK
-time: 69.630324963
-reason: RET
-time: 69.630324963
-reason: ---
-time: 75.098065011
-reason: ---
-time: 75.111931153
-reason: ---
-time: 75.187013405
-reason: ---
-time: 75.200840419
-reason: ---
-time: 75.291494198
-reason: ---
-time: 75.556916278
-reason: ---
-time: 78.186071843
-reason: ---
-time: 78.251141309
-reason: ---
-time: 78.264987448
-reason: ---
-time: 78.882592699
-reason: ---
-time: 78.965356254
-reason: ---
-time: 78.995033973
-reason: ---
-time: 79.290807891
-reason: ---
-time: 82.600459827
-reason: ---
-time: 84.708654060
-reason: ---
-time: 84.726606044
-reason: ---
-time: 84.815047272
-reason: ---
-time: 86.865012433
-reason: ---
-time: 86.931130098
-reason: ---
-time: 89.893801989
-reason: ---
-time: 89.914271126
-reason: ---
-time: 89.978256051
-reason: ---
-time: 90.116964059
-reason: ---
-time: 90.126055527
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: CBK
-time: 91.345102211
-reason: RET
-time: 91.345102211
-Received packet size for 11: 2904720
+time: 42.573136215
+reason: COL
+time: 97.907073304
+Received packet size for 11: 648576
 Sent packet size for 11: 0
 ################################################################################
 
@@ -911,7 +1137,7 @@ Time series node predictions: 11->-9
 
 ################################################################################
 
-T: 89.211813308 P: True
+T: 59.261664763 P: True
 
 
 
@@ -924,47 +1150,27 @@ Node Stats for: 12
 
 ################################################################################
 
-Dropped packet size for 12: 24662
+Dropped packet size for 12: 24032
 Time sequenced reason for dropped packets: 
-reason: ARP
-time: 12.094926470
-reason: ARP
-time: 16.010134075
-reason: ARP
-time: 21.591912349
-reason: ARP
-time: 21.591912349
 reason: COL
-time: 38.914897845
-reason: ARP
-time: 41.052403084
-reason: ARP
-time: 50.568584969
-reason: ARP
-time: 51.453472234
+time: 42.573136270
+reason: COL
+time: 74.696494504
 reason: CBK
-time: 51.453472234
-reason: ---
-time: 96.442281915
-reason: ---
-time: 96.489651365
-reason: ---
-time: 97.621433140
-reason: ---
-time: 97.731028670
-reason: ---
-time: 97.807974887
-reason: ---
-time: 97.960590275
-reason: ---
-time: 98.036458163
-reason: ---
-time: 98.089383354
-reason: ---
-time: 98.669176391
-reason: ---
-time: 99.715101242
-Received packet size for 12: 1234416
+time: 79.503138591
+reason: CBK
+time: 79.503138591
+reason: CBK
+time: 79.503138591
+reason: CBK
+time: 79.503138591
+reason: CBK
+time: 79.503138591
+reason: RET
+time: 79.503138591
+reason: COL
+time: 97.907073505
+Received packet size for 12: 890120
 Sent packet size for 12: 0
 ################################################################################
 
@@ -972,7 +1178,7 @@ Time series node predictions: 12->-8
 
 ################################################################################
 
-T: 99.109751536 P: True
+T: 74.643831904 P: True
 
 
 
@@ -985,151 +1191,27 @@ Node Stats for: 13
 
 ################################################################################
 
-Dropped packet size for 13: 50076
+Dropped packet size for 13: 26212
 Time sequenced reason for dropped packets: 
-reason: ARP
-time: 12.033411355
+reason: COL
+time: 42.573135966
+reason: COL
+time: 55.420572924
 reason: ---
-time: 15.927941404
+time: 64.613424885
 reason: ---
-time: 15.987252334
+time: 64.840814469
 reason: ---
-time: 16.019445235
+time: 65.587667785
 reason: ---
-time: 16.019730633
+time: 66.724900912
 reason: ---
-time: 16.344738174
-reason: ---
-time: 16.424508791
-reason: ---
-time: 16.594542459
-reason: ---
-time: 16.873390405
-reason: ---
-time: 17.563096406
-reason: ---
-time: 17.572992449
-reason: ---
-time: 17.615190402
-reason: ---
-time: 17.636805426
-reason: ---
-time: 17.660406643
-reason: ---
-time: 23.791490885
-reason: ---
-time: 23.801357775
-reason: ---
-time: 23.805278000
-reason: ---
-time: 23.843534792
-reason: ---
-time: 23.909479069
-reason: ---
-time: 23.951577066
-reason: ---
-time: 25.323473494
-reason: ---
-time: 33.123571616
-reason: ---
-time: 33.135363260
-reason: ---
-time: 33.211514416
-reason: ---
-time: 33.321367851
-reason: ---
-time: 33.381646972
-reason: ---
-time: 35.062933166
-reason: ---
-time: 35.351025888
-reason: ---
-time: 35.365072628
-reason: ---
-time: 45.735014967
-reason: ---
-time: 47.632869352
-reason: ---
-time: 47.662525041
-reason: ---
-time: 47.850791029
-reason: ---
-time: 48.370688605
-reason: ---
-time: 49.554437133
-reason: ---
-time: 50.217380052
-reason: ---
-time: 50.243028253
-reason: ---
-time: 50.376902001
-reason: ---
-time: 51.120806670
-reason: ---
-time: 56.171844210
-reason: ---
-time: 56.191287201
-reason: ---
-time: 59.471847222
-reason: ---
-time: 59.473504757
-reason: ---
-time: 59.504901243
-reason: ---
-time: 59.565059985
-reason: ---
-time: 59.939477989
-reason: ---
-time: 60.032296092
-reason: ---
-time: 74.584503569
-reason: ---
-time: 74.602949404
-reason: ---
-time: 76.308386160
-reason: ---
-time: 76.399198815
-reason: ---
-time: 76.413104573
-reason: ---
-time: 76.459358150
-reason: ---
-time: 78.465353629
-reason: ---
-time: 78.614241839
-reason: ---
-time: 79.008899935
-reason: ---
-time: 79.064520787
-reason: ---
-time: 79.129337670
-reason: ---
-time: 80.696756366
-reason: ---
-time: 80.782890843
-reason: ---
-time: 80.836987000
-reason: ---
-time: 80.884877244
-reason: ---
-time: 80.955921304
-reason: ---
-time: 82.167172908
-reason: ---
-time: 82.263520976
-reason: ---
-time: 82.344622078
-reason: ---
-time: 90.378040151
-reason: ---
-time: 90.414069848
-reason: ---
-time: 90.428853349
-reason: ---
-time: 90.442678844
-reason: ---
-time: 90.476045257
-Received packet size for 13: 2705632
+time: 68.038571540
+reason: COL
+time: 74.696494470
+reason: COL
+time: 97.907073347
+Received packet size for 13: 1852112
 Sent packet size for 13: 0
 ################################################################################
 
@@ -1137,7 +1219,7 @@ Time series node predictions: 13->-7
 
 ################################################################################
 
-T: 59.565034985 P: True
+T: 62.788841534 P: True
 
 
 
@@ -1150,23 +1232,61 @@ Node Stats for: 14
 
 ################################################################################
 
-Dropped packet size for 14: 17032
+Dropped packet size for 14: 29654
 Time sequenced reason for dropped packets: 
-reason: ARP
-time: 75.391047441
+reason: ---
+time: 33.866318018
+reason: COL
+time: 55.420573223
+reason: ---
+time: 56.648202842
+reason: ---
+time: 57.722291382
+reason: ---
+time: 58.093714124
+reason: ---
+time: 58.799463701
+reason: ---
+time: 58.980364842
 reason: CBK
-time: 82.979411544
+time: 60.027863132
 reason: CBK
-time: 82.979411544
+time: 60.027863132
 reason: CBK
-time: 82.979411544
+time: 60.027863132
 reason: CBK
-time: 82.979411544
+time: 60.027863132
 reason: CBK
-time: 82.979411544
+time: 60.027863132
+reason: CBK
+time: 60.027863132
+reason: CBK
+time: 60.027863132
+reason: CBK
+time: 60.027863132
+reason: CBK
+time: 60.027863132
+reason: CBK
+time: 60.027863132
 reason: RET
-time: 82.979411544
-Received packet size for 14: 514168
+time: 60.027863132
+reason: COL
+time: 74.696494833
+reason: CBK
+time: 85.674364655
+reason: CBK
+time: 85.674364655
+reason: CBK
+time: 85.674364655
+reason: CBK
+time: 85.674364655
+reason: CBK
+time: 85.674364655
+reason: CBK
+time: 85.674364655
+reason: RET
+time: 85.674364655
+Received packet size for 14: 1669968
 Sent packet size for 14: 0
 ################################################################################
 
@@ -1174,7 +1294,7 @@ Time series node predictions: 14->-6
 
 ################################################################################
 
-T: 25.545112981 P: True
+T: 48.009110981 P: True
 
 
 
@@ -1187,9 +1307,35 @@ Node Stats for: 15
 
 ################################################################################
 
-Dropped packet size for 15: 15264
+Dropped packet size for 15: 24420
 Time sequenced reason for dropped packets: 
-Received packet size for 15: 1184472
+reason: ARP
+time: 12.002574901
+reason: ARP
+time: 16.006587518
+reason: COL
+time: 42.573135856
+reason: ---
+time: 69.318041093
+reason: ---
+time: 69.466392829
+reason: ---
+time: 70.291392005
+reason: COL
+time: 74.696494496
+reason: CBK
+time: 94.320060876
+reason: CBK
+time: 94.320060876
+reason: CBK
+time: 94.320060876
+reason: CBK
+time: 94.320060876
+reason: CBK
+time: 94.320060876
+reason: RET
+time: 94.320060876
+Received packet size for 15: 2258856
 Sent packet size for 15: 0
 ################################################################################
 
@@ -1197,7 +1343,7 @@ Time series node predictions: 15->-5
 
 ################################################################################
 
-T: 87.139910667 P: True
+T: 25.458854070 P: True
 
 
 
@@ -1210,73 +1356,83 @@ Node Stats for: 16
 
 ################################################################################
 
-Dropped packet size for 16: 11870
+Dropped packet size for 16: 31084
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 21.593013110
-reason: ---
-time: 21.631547105
-reason: ---
-time: 23.112402547
-reason: ---
-time: 23.428971755
-reason: ---
-time: 25.674824909
-reason: ---
-time: 25.945729246
 reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
-reason: CBK
-time: 83.824069358
+time: 34.614314795
 reason: RET
-time: 83.824069358
+time: 34.614314795
+reason: ---
+time: 40.612690454
+reason: ---
+time: 42.188469427
+reason: ---
+time: 42.217269732
 reason: CBK
-time: 86.185536690
+time: 42.416329477
 reason: CBK
-time: 86.185536690
+time: 42.416329477
 reason: CBK
-time: 86.185536690
+time: 42.416329477
 reason: CBK
-time: 86.185536690
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
+reason: CBK
+time: 42.416329477
 reason: RET
-time: 86.185536690
+time: 42.416329477
+reason: COL
+time: 55.420573034
+reason: ---
+time: 58.794711819
+reason: ---
+time: 58.963861269
+reason: ---
+time: 59.522592839
+reason: ---
+time: 60.752041438
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
 reason: CBK
-time: 98.706517230
+time: 61.412776749
+reason: CBK
+time: 61.412776749
 reason: RET
-time: 98.706517230
-Received packet size for 16: 2175456
+time: 61.412776749
+reason: COL
+time: 74.696494385
+reason: COL
+time: 97.907073167
+Received packet size for 16: 2283240
 Sent packet size for 16: 0
 ################################################################################
 
@@ -1284,7 +1440,7 @@ Time series node predictions: 16->-4
 
 ################################################################################
 
-T: 38.539770240 P: True
+T: 52.231226288 P: True
 
 
 
@@ -1297,53 +1453,71 @@ Node Stats for: 17
 
 ################################################################################
 
-Dropped packet size for 17: 14822
+Dropped packet size for 17: 28536
 Time sequenced reason for dropped packets: 
-reason: ARP
-time: 12.051790235
-reason: ARP
-time: 21.622097492
 reason: ---
-time: 50.575168846
+time: 24.189606854
 reason: ---
-time: 50.582683553
+time: 24.224371519
 reason: ---
-time: 50.751026612
+time: 24.629206390
 reason: ---
-time: 51.384804705
+time: 24.643899110
 reason: ---
-time: 51.437977629
+time: 24.688609844
+reason: ---
+time: 24.732085378
+reason: ---
+time: 25.152287161
+reason: ---
+time: 57.271756840
+reason: ---
+time: 58.092128805
+reason: ---
+time: 58.727035907
+reason: ---
+time: 59.441780803
+reason: ---
+time: 59.467397314
+reason: ---
+time: 59.508727163
+reason: ---
+time: 60.759875892
+reason: COL
+time: 74.696494927
 reason: CBK
-time: 64.579232915
+time: 85.676339079
 reason: CBK
-time: 64.579232915
+time: 85.676339079
 reason: CBK
-time: 64.579232915
+time: 85.676339079
 reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
-reason: CBK
-time: 64.579232915
+time: 85.676339079
 reason: RET
-time: 64.579232915
-Received packet size for 17: 1970184
+time: 85.676339079
+reason: ---
+time: 93.911640350
+reason: ---
+time: 94.624695884
+reason: ---
+time: 94.631248843
+reason: ---
+time: 94.647146943
+reason: ARP
+time: 94.711240972
+reason: ---
+time: 95.987532545
+reason: ---
+time: 96.005954895
+reason: ---
+time: 96.081563755
+reason: ---
+time: 96.341247375
+reason: ---
+time: 96.564755932
+reason: ---
+time: 96.828409114
+Received packet size for 17: 2665216
 Sent packet size for 17: 0
 ################################################################################
 
@@ -1351,7 +1525,7 @@ Time series node predictions: 17->-3
 
 ################################################################################
 
-T: 73.861051946 P: True
+T: 13.624112037 P: True
 
 
 
@@ -1364,47 +1538,15 @@ Node Stats for: 18
 
 ################################################################################
 
-Dropped packet size for 18: 17884
+Dropped packet size for 18: 23166
 Time sequenced reason for dropped packets: 
-reason: ARP
-time: 17.085848038
-reason: CBK
-time: 25.053896371
-reason: CBK
-time: 25.053896371
-reason: CBK
-time: 25.053896371
-reason: CBK
-time: 25.053896371
-reason: CBK
-time: 25.053896371
-reason: CBK
-time: 25.053896371
-reason: RET
-time: 25.053896371
-reason: ARP
-time: 38.783884442
 reason: COL
-time: 38.914897820
-reason: ---
-time: 50.410517883
-reason: ---
-time: 50.575536489
-reason: ---
-time: 53.613792393
-reason: ---
-time: 53.667095754
-reason: ---
-time: 54.752955302
-reason: ---
-time: 95.134054007
-reason: ---
-time: 96.683707911
-reason: ---
-time: 96.744990716
-reason: ---
-time: 97.107505844
-Received packet size for 18: 1567240
+time: 42.573136096
+reason: COL
+time: 74.696494429
+reason: COL
+time: 97.907073332
+Received packet size for 18: 1858432
 Sent packet size for 18: 0
 ################################################################################
 
@@ -1412,7 +1554,7 @@ Time series node predictions: 18->-2
 
 ################################################################################
 
-T: 44.343409817 P: True
+T: 12.572086962 P: True
 
 
 
@@ -1425,73 +1567,35 @@ Node Stats for: 19
 
 ################################################################################
 
-Dropped packet size for 19: 10012
+Dropped packet size for 19: 25172
 Time sequenced reason for dropped packets: 
-reason: ---
-time: 12.204432342
-reason: ---
-time: 12.216675393
-reason: ---
-time: 12.228640508
-reason: ---
-time: 12.256023184
-reason: ---
-time: 19.079066875
-reason: ---
-time: 19.101136504
-reason: ---
-time: 21.065097013
-reason: ---
-time: 21.628055242
-reason: ---
-time: 21.648351618
+reason: ARP
+time: 24.287494143
+reason: ARP
+time: 24.321078544
 reason: CBK
-time: 23.600876089
+time: 24.365162678
 reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: CBK
-time: 23.600876089
-reason: RET
-time: 23.600876089
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: CBK
-time: 29.348041103
-reason: RET
-time: 29.348041103
+time: 24.365162678
 reason: COL
-time: 38.914897642
-Received packet size for 19: 1948440
+time: 55.420573282
+reason: ---
+time: 55.563198889
+reason: ---
+time: 58.116095134
+reason: ---
+time: 58.194014828
+reason: ---
+time: 58.311233572
+reason: ---
+time: 58.378979515
+reason: ---
+time: 58.982841452
+reason: COL
+time: 74.696494772
+reason: RET
+time: 90.017799626
+Received packet size for 19: 1325504
 Sent packet size for 19: 0
 ################################################################################
 
@@ -1499,7 +1603,7 @@ Time series node predictions: 19->-1
 
 ################################################################################
 
-T: 14.191821928 P: True
+T: 52.356716925 P: True
 
 
 
