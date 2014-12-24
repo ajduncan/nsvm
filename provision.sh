@@ -34,6 +34,10 @@ apt-get -y install build-essential autoconf automake libxmu-dev dpkg-dev libx11-
 echo "Building system dependencies for application dependencies: python-numpy, python-scipy."
 apt-get -y build-dep python-numpy python-scipy > /dev/null 2>&1
 
+# ns-2.35 build requires gcc-4.4
+echo "Installing gcc-4.4 to build ns-2.35 with no code modifications."
+apt-get -y install gcc-4.4 g++-4.4
+
 # Build ns-2
 if [ ! -d "/home/vagrant/ns-allinone-2.35" ];
 then
@@ -51,6 +55,9 @@ then
 	echo "Inserting aodve extensions..."
 	mkdir /home/vagrant/ns-allinone-2.35/ns-2.35/aodve/
 	cp /vagrant/aodve/* /home/vagrant/ns-allinone-2.35/ns-2.35/aodve/
+
+	# echo "Exporting CC=gcc-4.4 GXX=g++-4.4 to build ns-2."
+	export CC=gcc-4.4 CXX=g++-4.4
 
 	echo "Building ns-2..."
 	cd /home/vagrant/ns-allinone-2.35

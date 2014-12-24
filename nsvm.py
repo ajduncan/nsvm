@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from datetime import datetime
+import os
 import random
 import re
 import subprocess
@@ -25,34 +26,36 @@ def run_simulation(defaultrng=9999, predict=False):
     if predict:
         print "{0} : Running ns-2 simulation with prediction algorithm.".format(datetime.now())
         print "RNG is {0}".format(defaultrng)
-        simulation_process = subprocess.Popen(
-            [
-                '/home/vagrant/ns-allinone-2.35/bin/ns',
-                'simulation/simulation.tcl',
-                '--noinput',
-                '--defaultrng',
-                '{0}'.format(defaultrng),
-                '--results',
-                'with_prediction',
-                '--predict'
-            ],
-            stdout=open('/dev/null', 'w'),
-            stderr=open('/dev/null', 'w'))
+        with open(os.devnull, 'w') as devnull:
+            simulation_process = subprocess.Popen(
+                [
+                    '/home/vagrant/ns-allinone-2.35/bin/ns',
+                    'simulation/simulation.tcl',
+                    '--noinput',
+                    '--defaultrng',
+                    '{0}'.format(defaultrng),
+                    '--results',
+                    'with_prediction',
+                    '--predict'
+                ],
+                stdout=devnull,
+                stderr=devnull)
     else:
         print "{0} : Running ns-2 simulation without prediction algorithm.".format(datetime.now())
         print "RNG is {0}".format(defaultrng)
-        simulation_process = subprocess.Popen(
-            [
-                '/home/vagrant/ns-allinone-2.35/bin/ns',
-                'simulation/simulation.tcl',
-                '--noinput',
-                '--defaultrng',
-                '{0}'.format(defaultrng),
-                '--results',
-                'without_prediction'
-            ],
-            stdout=open('/dev/null', 'w'),
-            stderr=open('/dev/null', 'w'))
+        with open(os.devnull, 'w') as devnull:
+            simulation_process = subprocess.Popen(
+                [
+                    '/home/vagrant/ns-allinone-2.35/bin/ns',
+                    'simulation/simulation.tcl',
+                    '--noinput',
+                    '--defaultrng',
+                    '{0}'.format(defaultrng),
+                    '--results',
+                    'without_prediction'
+                ],
+                stdout=devnull,
+                stderr=devnull)
 
     simulation_process.wait()
     print "{0} : ns-2 simulation complete.".format(datetime.now())
