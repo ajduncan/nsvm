@@ -81,9 +81,6 @@ def run_prediction(virtualenv='~/.env2/'):
             'results/with_prediction/predict.tcl',
             'results/without_predict.txt'
         ])
-    #,
-    #    stdout=open('/dev/null', 'w'),
-    #    stderr=open('/dev/null', 'w'))
     predict_process.wait()
     print "{0} : Prediction generated.".format(datetime.now())
 
