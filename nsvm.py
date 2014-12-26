@@ -12,6 +12,18 @@ re_node_identifier = re.compile("for (\d+):")
 re_dropped = re.compile(": (\d+)")
 
 
+def setup_experiment():
+    """
+    Ensure that certain conditions are met before running a simulation.
+    """
+
+    if not os.path.exists('/vagrant/results/without_prediction'):
+        os.makedirs('/vagrant/results/without_prediction')
+
+    if not os.path.exists('/vagrant/results/with_prediction'):
+        os.makedirs('/vagrant/results/with_prediction')
+
+
 def run_simulation(defaultrng=9999, predict=False):
     """
     Run an ns-2 simulation using the compiled version of ns-2.
@@ -202,6 +214,9 @@ if __name__ == "__main__":
     runs = 3
     maxnodes = 20
     virtualenv = '/home/vagrant/nsvm_env2/'
+
+    # set the experiment up.
+    setup_experiment()
 
     # Conduct ``runs`` runs of experiments
     for i in range(0, runs):
